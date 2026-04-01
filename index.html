@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Table & Métro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root {
+  --bg: #0F0E0B;
+  --surface: #1A1916;
+  --surface2: #232119;
+  --border: #2E2C27;
+  --border-light: #3A3830;
+  --cream: #E8E2D5;
+  --muted: #6B6760;
+  --accent: #D4A853;
+  --accent2: #B8724A;
+  --accent-glow: rgba(212,168,83,0.12);
+  --text: #C8C2B5;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 20px;
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--cream); }
+.logo em { color: var(--accent); font-style: italic; }
+.logo-tag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
+.mode-bar { display: flex; background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 55px; z-index: 190; }
+.mode-btn { flex: 1; padding: 11px 8px; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.mode-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* QUESTIONNAIRE */
+.q-wrap { max-width: 600px; margin: 0 auto; padding: 22px 18px 90px; }
+.field-block { margin-bottom: 22px; }
+.field-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.field-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.loc-btn { width: 100%; padding: 13px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'Outfit', sans-serif; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s; text-align: left; }
+.loc-btn:hover { border-color: var(--accent); }
+.loc-pin { color: var(--accent); font-size: 16px; flex-shrink: 0; }
+.loc-text { flex: 1; }
+.loc-name { font-weight: 500; color: var(--cream); font-size: 14px; display: block; }
+.loc-sub { font-size: 11px; color: var(--muted); display: block; margin-top: 1px; }
+.loc-change { font-size: 11px; color: var(--muted); }
+
+.slider-wrap { display: flex; align-items: center; gap: 12px; }
+.sl-end { font-size: 11px; color: var(--muted); min-width: 30px; }
+.sl-end:last-of-type { text-align: right; }
+input[type=range] { flex: 1; -webkit-appearance: none; height: 3px; border-radius: 2px; background: var(--border); outline: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--accent); }
+.sl-val { font-size: 14px; font-weight: 600; color: var(--accent); min-width: 68px; text-align: right; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 8px 14px; border: 1px solid var(--border); border-radius: 100px; font-size: 13px; color: var(--text); cursor: pointer; transition: all 0.15s; user-select: none; background: transparent; }
+.chip:hover { border-color: var(--accent); color: var(--cream); }
+.chip.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+
+.day-row { display: flex; gap: 5px; }
+.day-chip { flex: 1; padding: 9px 4px; border: 1px solid var(--border); border-radius: 8px; text-align: center; font-size: 11px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.15s; user-select: none; }
+.day-chip.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+
+.group-row { display: flex; gap: 8px; }
+.group-chip { flex: 1; padding: 10px 6px; border: 1px solid var(--border); border-radius: 10px; text-align: center; font-size: 11px; color: var(--text); cursor: pointer; transition: all 0.15s; }
+.group-chip .gi { font-size: 18px; display: block; margin-bottom: 3px; }
+.group-chip.on { border-color: var(--accent); background: var(--accent-glow); color: var(--accent); }
+
+.cta-wrap { position: sticky; bottom: 0; background: linear-gradient(to top, var(--bg) 80%, transparent); padding: 16px 18px 18px; }
+.cta-btn { width: 100%; padding: 15px; background: var(--accent); color: var(--bg); border: none; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: opacity 0.2s, transform 0.1s; letter-spacing: 0.2px; }
+.cta-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.cta-btn:not(:disabled):active { transform: scale(0.99); }
+
+/* RESULTS */
+.results-wrap { max-width: 600px; margin: 0 auto; padding: 20px 18px 80px; }
+.results-intro { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--text); line-height: 1.65; margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.r-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; overflow: hidden; animation: cardIn 0.4s ease both; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.r-top { padding: 18px 18px 14px; border-bottom: 1px solid var(--border); }
+.r-rank-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+.r-rank { font-family: 'Cormorant Garamond', serif; font-size: 40px; line-height: 1; color: var(--border-light); flex-shrink: 0; margin-top: -4px; }
+.r-nb { flex: 1; }
+.r-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--cream); line-height: 1.1; }
+.r-loc { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.r-match { background: var(--accent); color: var(--bg); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 100px; flex-shrink: 0; margin-top: 4px; }
+.r-why { font-size: 14px; line-height: 1.7; color: var(--text); }
+.r-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.r-tag { background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; font-size: 11px; padding: 4px 10px; color: var(--text); }
+.r-tag.gold { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+.r-meta { display: grid; grid-template-columns: 1fr 1fr; }
+.r-mc { padding: 12px 15px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 12px; }
+.r-mc:nth-child(even) { border-right: none; }
+.r-mc:nth-last-child(-n+2) { border-bottom: none; }
+.r-ml { color: var(--muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
+.r-mv { color: var(--cream); font-weight: 500; line-height: 1.4; }
+.r-caveat { padding: 11px 15px; font-size: 12px; color: var(--muted); font-style: italic; border-top: 1px dashed var(--border); line-height: 1.6; }
+
+.loading { text-align: center; padding: 60px 24px; }
+.l-spin { width: 32px; height: 32px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.75s linear infinite; margin: 0 auto 16px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.l-txt { font-size: 13px; color: var(--muted); font-style: italic; }
+.err-box { background: rgba(184,114,74,0.1); border: 1px solid rgba(184,114,74,0.3); border-radius: 10px; padding: 16px; font-size: 14px; color: var(--accent2); line-height: 1.6; }
+
+/* MAP MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); z-index: 1000; align-items: flex-end; }
+.modal-overlay.open { display: flex; }
+.modal-sheet { background: var(--surface); width: 100%; max-width: 640px; margin: 0 auto; border-radius: 16px 16px 0 0; overflow: hidden; height: 86vh; display: flex; flex-direction: column; animation: slideUp 0.28s ease; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.modal-hdr { padding: 15px 18px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.modal-title { font-size: 15px; font-weight: 600; color: var(--cream); }
+.modal-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.modal-close { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 8px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+.modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.quick-locs { display: flex; gap: 8px; overflow-x: auto; padding: 10px 18px; border-bottom: 1px solid var(--border); flex-shrink: 0; scrollbar-width: none; }
+.quick-locs::-webkit-scrollbar { display: none; }
+.ql { flex-shrink: 0; padding: 6px 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; color: var(--text); cursor: pointer; white-space: nowrap; transition: all 0.15s; }
+.ql:hover { border-color: var(--accent); color: var(--accent); }
+#loc-map { flex: 1; }
+.modal-footer { padding: 13px 18px; border-top: 1px solid var(--border); display: flex; gap: 12px; align-items: center; flex-shrink: 0; background: var(--surface); }
+.mf-info { flex: 1; font-size: 13px; }
+.mf-name { color: var(--cream); font-weight: 500; display: block; margin-bottom: 2px; }
+.mf-coords { color: var(--muted); font-size: 11px; }
+.mf-btn { background: var(--accent); color: var(--bg); border: none; border-radius: 8px; padding: 11px 20px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; flex-shrink: 0; }
+
+/* BROWSE TAB */
+.browse-wrap { height: calc(100vh - 103px); display: flex; flex-direction: column; }
+.arrond-bar { display: flex; gap: 8px; overflow-x: auto; padding: 11px 18px; border-bottom: 1px solid var(--border); flex-shrink: 0; scrollbar-width: none; }
+.arrond-bar::-webkit-scrollbar { display: none; }
+.ac { flex-shrink: 0; padding: 7px 14px; border: 1px solid var(--border); border-radius: 100px; font-size: 12px; color: var(--text); cursor: pointer; white-space: nowrap; transition: all 0.15s; background: transparent; }
+.ac.on { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+#browse-map { flex: 1; min-height: 0; }
+.browse-list { max-height: 38vh; overflow-y: auto; border-top: 1px solid var(--border); flex-shrink: 0; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.bl-hdr { padding: 12px 18px 8px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); position: sticky; top: 0; background: var(--surface2); border-bottom: 1px solid var(--border); }
+.bl-card { padding: 13px 18px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
+.bl-card:hover { background: var(--surface2); }
+.bl-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--cream); margin-bottom: 5px; }
+.bl-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.bl-tag { font-size: 11px; color: var(--muted); padding: 3px 9px; border: 1px solid var(--border); border-radius: 100px; }
+.bl-tag.gold { border-color: var(--accent); color: var(--accent); }
+.bl-empty { padding: 28px 18px; text-align: center; font-size: 14px; color: var(--muted); font-style: italic; }
+
+/* LEAFLET DARK */
+.leaflet-container { background: #1a1916 !important; }
+.leaflet-tile { filter: brightness(0.72) saturate(0.65); }
+.leaflet-popup-content-wrapper { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--cream); box-shadow: 0 8px 32px rgba(0,0,0,0.6); }
+.leaflet-popup-tip { background: var(--surface); }
+.leaflet-popup-content { margin: 10px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; }
+.popup-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--cream); margin-bottom: 4px; }
+.popup-meta { font-size: 11px; color: var(--muted); line-height: 1.6; }
+.leaflet-control-zoom a { background: var(--surface) !important; color: var(--cream) !important; border-color: var(--border) !important; }
+.leaflet-control-attribution { display: none; }
+
+@media (max-width: 400px) {
+  .r-meta { grid-template-columns: 1fr; }
+  .r-mc:nth-child(odd) { border-right: none; }
+  .r-mc { border-bottom: 1px solid var(--border) !important; }
+  .r-mc:last-child { border-bottom: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">Table <em>&</em> Métro</div>
+    <div class="logo-tag">Guide Gastronomique · Paris</div>
+  </div>
+</header>
+
+<div class="mode-bar">
+  <div class="mode-btn active" onclick="setMode('q')">🍽 Questionnaire</div>
+  <div class="mode-btn" onclick="setMode('browse')">🗺 Explorer Paris</div>
+</div>
+
+<!-- ══ QUESTIONNAIRE PANEL ══ -->
+<div id="panel-q" class="panel active">
+
+  <!-- FORM -->
+  <div id="form-view">
+    <div class="q-wrap">
+
+      <div class="field-block">
+        <div class="field-label">Point de départ</div>
+        <button class="loc-btn" onclick="openModal()">
+          <span class="loc-pin">📍</span>
+          <span class="loc-text">
+            <span class="loc-name" id="loc-name-display">Alésia — 14ème</span>
+            <span class="loc-sub" id="loc-coords-display">48.8282, 2.3264</span>
+          </span>
+          <span class="loc-change">Modifier →</span>
+        </button>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Temps de trajet max (métro)</div>
+        <div class="slider-wrap">
+          <span class="sl-end">5'</span>
+          <input type="range" id="s-travel" min="5" max="60" step="5" value="25" oninput="sv('s-travel','v-travel',v=>v+'&thinsp;min')">
+          <span class="sl-end">60'</span>
+          <span class="sl-val" id="v-travel">25&thinsp;min</span>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Jour de la réservation</div>
+        <div class="day-row" id="g-day">
+          <div class="day-chip" onclick="ts(this,'g-day')">Lun</div>
+          <div class="day-chip" onclick="ts(this,'g-day')">Mar</div>
+          <div class="day-chip" onclick="ts(this,'g-day')">Mer</div>
+          <div class="day-chip on" onclick="ts(this,'g-day')">Jeu</div>
+          <div class="day-chip" onclick="ts(this,'g-day')">Ven</div>
+          <div class="day-chip" onclick="ts(this,'g-day')">Sam</div>
+          <div class="day-chip" onclick="ts(this,'g-day')">Dim</div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Groupe</div>
+        <div class="group-row" id="g-group">
+          <div class="group-chip on" onclick="ts(this,'g-group')"><span class="gi">🧑</span>Solo</div>
+          <div class="group-chip" onclick="ts(this,'g-group')"><span class="gi">👫</span>Couple</div>
+          <div class="group-chip" onclick="ts(this,'g-group')"><span class="gi">👥</span>3–4</div>
+          <div class="group-chip" onclick="ts(this,'g-group')"><span class="gi">🎉</span>5+</div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Cuisine</div>
+        <div class="chip-row" id="g-cuisine">
+          <div class="chip" onclick="tm(this)">🥖 Française classique</div>
+          <div class="chip" onclick="tm(this)">🥩 Bistrot / Brasserie</div>
+          <div class="chip" onclick="tm(this)">🐟 Fruits de mer</div>
+          <div class="chip" onclick="tm(this)">🍣 Japonaise</div>
+          <div class="chip" onclick="tm(this)">🌿 Végétarienne</div>
+          <div class="chip" onclick="tm(this)">🍝 Italienne</div>
+          <div class="chip" onclick="tm(this)">🌏 Asiatique</div>
+          <div class="chip" onclick="tm(this)">🥘 Méditerranéenne</div>
+          <div class="chip" onclick="tm(this)">✨ Surprise me</div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Niveau</div>
+        <div class="chip-row" id="g-niveau">
+          <div class="chip" onclick="ts(this,'g-niveau')">🪑 Décontracté</div>
+          <div class="chip" onclick="ts(this,'g-niveau')">🍷 Bistronomique</div>
+          <div class="chip" onclick="ts(this,'g-niveau')">🕯 Semi-gastro</div>
+          <div class="chip" onclick="ts(this,'g-niveau')">⭐ Haute cuisine</div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Budget par personne (boissons incluses)</div>
+        <div class="slider-wrap">
+          <span class="sl-end">€20</span>
+          <input type="range" id="s-budget" min="20" max="250" step="10" value="70" oninput="sv('s-budget','v-budget',v=>'€'+v)">
+          <span class="sl-end">€250</span>
+          <span class="sl-val" id="v-budget">€70</span>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Atmosphère</div>
+        <div class="chip-row" id="g-atmo">
+          <div class="chip" onclick="tm(this)">💑 Romantique</div>
+          <div class="chip" onclick="tm(this)">🥂 Célébration</div>
+          <div class="chip" onclick="tm(this)">🗣 Animé & vivant</div>
+          <div class="chip" onclick="tm(this)">📖 Intime & calme</div>
+          <div class="chip" onclick="tm(this)">💼 Business</div>
+          <div class="chip" onclick="tm(this)">🌞 Terrasse</div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class="field-label">Options supplémentaires</div>
+        <div class="chip-row" id="g-extras">
+          <div class="chip" onclick="tm(this)">🌿 Terrasse / extérieur</div>
+          <div class="chip" onclick="tm(this)">🚶 Sans réservation</div>
+          <div class="chip" onclick="tm(this)">📅 Réservation conseillée</div>
+          <div class="chip" onclick="tm(this)">🍶 Vins nature</div>
+          <div class="chip" onclick="tm(this)">🌱 Menu végé dispo</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="cta-wrap">
+      <button class="cta-btn" id="cta" onclick="findRestaurants()">Trouver mes restaurants →</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results-view" style="display:none;">
+    <div style="padding:13px 18px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:12px; position:sticky; top:103px; background:var(--bg); z-index:50;">
+      <button onclick="backToForm()" style="background:var(--surface); border:1px solid var(--border); border-radius:8px; color:var(--text); padding:8px 14px; font-family:'Outfit',sans-serif; font-size:13px; cursor:pointer;">← Modifier</button>
+      <span style="font-size:12px; color:var(--muted);" id="r-summary"></span>
+    </div>
+    <div id="r-content" class="results-wrap"></div>
+  </div>
+</div>
+
+<!-- ══ BROWSE PANEL ══ -->
+<div id="panel-browse" class="panel">
+  <div class="browse-wrap">
+    <div class="arrond-bar" id="arrond-bar">
+      <div class="ac on" onclick="filterArr(this,'all')">Tout Paris</div>
+      <div class="ac" onclick="filterArr(this,'1')">1er</div>
+      <div class="ac" onclick="filterArr(this,'2')">2ème</div>
+      <div class="ac" onclick="filterArr(this,'3')">3ème</div>
+      <div class="ac" onclick="filterArr(this,'4')">4ème</div>
+      <div class="ac" onclick="filterArr(this,'5')">5ème</div>
+      <div class="ac" onclick="filterArr(this,'6')">6ème</div>
+      <div class="ac" onclick="filterArr(this,'7')">7ème</div>
+      <div class="ac" onclick="filterArr(this,'8')">8ème</div>
+      <div class="ac" onclick="filterArr(this,'9')">9ème</div>
+      <div class="ac" onclick="filterArr(this,'10')">10ème</div>
+      <div class="ac" onclick="filterArr(this,'11')">11ème</div>
+      <div class="ac" onclick="filterArr(this,'12')">12ème</div>
+      <div class="ac" onclick="filterArr(this,'13')">13ème</div>
+      <div class="ac" onclick="filterArr(this,'14')">14ème</div>
+      <div class="ac" onclick="filterArr(this,'15')">15ème</div>
+      <div class="ac" onclick="filterArr(this,'16')">16ème</div>
+      <div class="ac" onclick="filterArr(this,'17')">17ème</div>
+      <div class="ac" onclick="filterArr(this,'18')">18ème</div>
+      <div class="ac" onclick="filterArr(this,'19')">19ème</div>
+      <div class="ac" onclick="filterArr(this,'20')">20ème</div>
+    </div>
+    <div id="browse-map"></div>
+    <div class="browse-list" id="browse-list">
+      <div class="bl-empty">Sélectionnez un arrondissement ci-dessus</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAP MODAL ══ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-sheet">
+    <div class="modal-hdr">
+      <div>
+        <div class="modal-title">Choisir votre point de départ</div>
+        <div class="modal-sub">Tapez sur la carte ou utilisez un raccourci</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">Annuler</button>
+    </div>
+    <div class="quick-locs">
+      <div class="ql" onclick="ql(48.8282,2.3264,'Alésia — 14ème')">📍 Alésia</div>
+      <div class="ql" onclick="ql(48.8588,2.3469,'Châtelet — 1er')">Châtelet</div>
+      <div class="ql" onclick="ql(48.8794,2.3553,'Gare du Nord — 10ème')">Gare du Nord</div>
+      <div class="ql" onclick="ql(48.8530,2.3499,'Saint-Germain — 6ème')">St-Germain</div>
+      <div class="ql" onclick="ql(48.8675,2.3820,'République — 11ème')">République</div>
+      <div class="ql" onclick="ql(48.8731,2.3439,'Opéra — 9ème')">Opéra</div>
+      <div class="ql" onclick="ql(48.8894,2.3448,'Montmartre — 18ème')">Montmartre</div>
+      <div class="ql" onclick="ql(48.8603,2.3477,'Île de la Cité — 4ème')">Île de la Cité</div>
+      <div class="ql" onclick="ql(48.8620,2.3880,'Nation — 11/12ème')">Nation</div>
+    </div>
+    <div id="loc-map"></div>
+    <div class="modal-footer">
+      <div class="mf-info">
+        <span class="mf-name" id="mf-name">Alésia — 14ème</span>
+        <span class="mf-coords" id="mf-coords">48.8282, 2.3264</span>
+      </div>
+      <button class="mf-btn" onclick="confirmLoc()">Confirmer →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── STATE ─────────────────────────────────────────────────
+let pLat=48.8282, pLng=2.3264, pName='Alésia — 14ème';
+let tmpLat=48.8282, tmpLng=2.3264, tmpName='Alésia — 14ème';
+let locMap=null, locMarker=null;
+let bMap=null, bMarkers=[];
+
+// ── UTILS ─────────────────────────────────────────────────
+function sv(sid,vid,fmt) { document.getElementById(vid).innerHTML = fmt(document.getElementById(sid).value); }
+function tm(el) { el.classList.toggle('on'); }
+function ts(el, gid) {
+  el.closest('#'+gid).querySelectorAll('[onclick]').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+}
+function getOn(gid) { return [...document.querySelectorAll('#'+gid+' .on')].map(c=>c.textContent.trim()); }
+
+// ── MODE ─────────────────────────────────────────────────
+function setMode(m) {
+  document.querySelectorAll('.mode-btn').forEach((b,i)=>b.classList.toggle('active',(i===0&&m==='q')||(i===1&&m==='browse')));
+  document.getElementById('panel-q').classList.toggle('active',m==='q');
+  document.getElementById('panel-browse').classList.toggle('active',m==='browse');
+  if (m==='browse' && !bMap) setTimeout(initBrowseMap, 80);
+}
+
+// ── LOCATION MODAL ────────────────────────────────────────
+function openModal() {
+  document.getElementById('modal').classList.add('open');
+  tmpLat=pLat; tmpLng=pLng; tmpName=pName;
+  updateMF();
+  if (!locMap) {
+    setTimeout(()=>{
+      locMap = L.map('loc-map',{zoomControl:true,attributionControl:false}).setView([tmpLat,tmpLng],14);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(locMap);
+      locMarker = L.marker([tmpLat,tmpLng],{draggable:true,
+        icon: L.divIcon({html:'<div style="background:#D4A853;border-radius:50%;width:26px;height:26px;border:3px solid #0F0E0B;box-shadow:0 2px 8px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;font-size:12px;">📍</div>',className:'',iconSize:[26,26],iconAnchor:[13,13]})
+      }).addTo(locMap);
+      locMarker.on('dragend', e=>{
+        const p=e.target.getLatLng();
+        tmpLat=+p.lat.toFixed(4); tmpLng=+p.lng.toFixed(4);
+        tmpName=`${tmpLat.toFixed(3)}, ${tmpLng.toFixed(3)}`; updateMF();
+      });
+      locMap.on('click', e=>{
+        tmpLat=+e.latlng.lat.toFixed(4); tmpLng=+e.latlng.lng.toFixed(4);
+        tmpName=`${tmpLat.toFixed(3)}, ${tmpLng.toFixed(3)}`;
+        locMarker.setLatLng([tmpLat,tmpLng]); updateMF();
+      });
+    }, 60);
+  } else {
+    locMap.setView([tmpLat,tmpLng],14);
+    locMarker.setLatLng([tmpLat,tmpLng]);
+    setTimeout(()=>locMap.invalidateSize(),60);
+  }
+}
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+function confirmLoc() {
+  pLat=tmpLat; pLng=tmpLng; pName=tmpName;
+  document.getElementById('loc-name-display').textContent=pName;
+  document.getElementById('loc-coords-display').textContent=`${pLat}, ${pLng}`;
+  closeModal();
+}
+function updateMF() {
+  document.getElementById('mf-name').textContent=tmpName;
+  document.getElementById('mf-coords').textContent=`${tmpLat}, ${tmpLng}`;
+}
+function ql(lat,lng,name) {
+  tmpLat=lat; tmpLng=lng; tmpName=name;
+  if(locMarker) locMarker.setLatLng([lat,lng]);
+  if(locMap) locMap.setView([lat,lng],14);
+  updateMF();
+}
+
+// ── FIND RESTAURANTS ──────────────────────────────────────
+async function findRestaurants() {
+  const travel = document.getElementById('s-travel').value;
+  const budget = document.getElementById('s-budget').value;
+  const day = getOn('g-day')[0] || 'non précisé';
+  const group = getOn('g-group')[0]?.replace(/\n/g,' ') || 'non précisé';
+  const cuisine = getOn('g-cuisine');
+  const niveau = getOn('g-niveau');
+  const atmo = getOn('g-atmo');
+  const extras = getOn('g-extras');
+
+  document.getElementById('cta').disabled=true;
+  document.getElementById('cta').textContent='Recherche…';
+  document.getElementById('form-view').style.display='none';
+  document.getElementById('results-view').style.display='block';
+  document.getElementById('r-summary').textContent=`${pName} · €${budget}/pers · ${travel} min max`;
+  document.getElementById('r-content').innerHTML=`<div class="loading"><div class="l-spin"></div><div class="l-txt">Consultation des meilleures tables parisiennes…</div></div>`;
+
+  const prompt=`You are the most authoritative Paris dining expert — equal parts Le Fooding editor, Omnivore critic, and r/paris power user. You know every corner of Paris intimately.
+
+User criteria:
+- Starting point: ${pName} (coordinates: ${pLat}, ${pLng})
+- Max metro/RER travel time: ${travel} minutes
+- Day of visit: ${day}
+- Group composition: ${group}
+- Cuisine: ${cuisine.length?cuisine.join(', '):'open to anything excellent'}
+- Level: ${niveau.length?niveau.join(', '):'any'}
+- Budget per person incl. drinks: €${budget}
+- Atmosphere: ${atmo.length?atmo.join(', '):'any'}
+- Special requirements: ${extras.length?extras.join(', '):'none'}
+
+Give exactly 4 recommendations. Be opinionated and specific. Think about the day of week carefully (many Paris restaurants close Mon or Tue). Include realistic metro route estimates from the given starting point. Mix iconic spots with discoveries.
+
+Respond ONLY with valid JSON — absolutely no markdown, no backticks, no text outside the JSON:
+{
+  "intro": "One evocative sentence framing these picks for the occasion",
+  "restaurants": [
+    {
+      "name": "Restaurant Name",
+      "arrondissement": "e.g. 11ème",
+      "neighbourhood": "e.g. Charonne",
+      "match": "e.g. 96%",
+      "why": "2-3 sentences: what makes it exceptional, what regulars rave about, why it fits this specific brief.",
+      "cuisine_tags": ["tag1","tag2","tag3"],
+      "highlight_tag": "one standout quality in 3-5 words",
+      "budget_reality": "e.g. €55-75pp with wine",
+      "metro_route": "e.g. ~20 min · M4 dir Montrouge → M9 dir Montreuil, sortie Voltaire",
+      "day_note": "e.g. Ouvert jeudi. Réserver 2 semaines à l'avance sur TheFork",
+      "group_note": "e.g. Tables intimes pour 2 — idéal en couple",
+      "terrace": false,
+      "walk_in": false,
+      "best_for": "e.g. Un vrai dîner romantique dans l'Est parisien",
+      "caveat": "One honest tip or caveat (optional, omit if nothing important)"
+    }
+  ]
+}`;
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:2200,messages:[{role:"user",content:prompt}]})
+    });
+    if(!res.ok) throw new Error(`API ${res.status}`);
+    const data=await res.json();
+    const raw=data.content.map(b=>b.text||'').join('');
+    const parsed=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    renderResults(parsed);
+  } catch(e) {
+    document.getElementById('r-content').innerHTML=`<div class="results-wrap"><div class="err-box"><strong>Erreur —</strong> impossible de charger les recommandations. Veuillez réessayer.<br><small style="opacity:.7;margin-top:6px;display:block;">${e.message}</small></div></div>`;
+  }
+  document.getElementById('cta').disabled=false;
+  document.getElementById('cta').textContent='Trouver mes restaurants →';
+}
+
+function renderResults(d) {
+  let h='';
+  if(d.intro) h+=`<div class="results-intro">${d.intro}</div>`;
+  (d.restaurants||[]).forEach((r,i)=>{
+    h+=`<div class="r-card" style="animation-delay:${i*0.09}s">
+      <div class="r-top">
+        <div class="r-rank-row">
+          <div class="r-rank">0${i+1}</div>
+          <div class="r-nb">
+            <div class="r-name">${r.name}</div>
+            <div class="r-loc">${r.arrondissement}${r.neighbourhood?' · '+r.neighbourhood:''}</div>
+          </div>
+          ${r.match?`<div class="r-match">${r.match}</div>`:''}
+        </div>
+        <div class="r-why">${r.why}</div>
+        <div class="r-tags">
+          ${(r.cuisine_tags||[]).map(t=>`<span class="r-tag">${t}</span>`).join('')}
+          ${r.highlight_tag?`<span class="r-tag gold">✦ ${r.highlight_tag}</span>`:''}
+          ${r.terrace?'<span class="r-tag">🌿 Terrasse</span>':''}
+          ${r.walk_in?'<span class="r-tag">🚶 Sans résa</span>':''}
+        </div>
+      </div>
+      <div class="r-meta">
+        <div class="r-mc"><div class="r-ml">Budget réel</div><div class="r-mv">${r.budget_reality||'—'}</div></div>
+        <div class="r-mc"><div class="r-ml">Trajet métro</div><div class="r-mv">${r.metro_route||'—'}</div></div>
+        <div class="r-mc"><div class="r-ml">Réservation</div><div class="r-mv">${r.day_note||'—'}</div></div>
+        <div class="r-mc"><div class="r-ml">Groupe</div><div class="r-mv">${r.group_note||'—'}</div></div>
+      </div>
+      ${r.caveat?`<div class="r-caveat">💡 ${r.caveat}</div>`:''}
+    </div>`;
+  });
+  document.getElementById('r-content').innerHTML=h;
+  document.getElementById('r-content').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function backToForm() {
+  document.getElementById('form-view').style.display='block';
+  document.getElementById('results-view').style.display='none';
+}
+
+// ── BROWSE MAP ────────────────────────────────────────────
+const SEED=[
+  {name:"Septime",arr:"11",nbh:"Charonne",lat:48.8530,lng:2.3799,c:"Bistronomique",b:"€€€",h:"Meilleur bistro de Paris"},
+  {name:"Le Comptoir du Relais",arr:"6",nbh:"Odéon",lat:48.8511,lng:2.3395,c:"Bistrot",b:"€€",h:"Saint-Germain classique"},
+  {name:"Frenchie",arr:"2",nbh:"Sentier",lat:48.8659,lng:2.3454,c:"Néo-bistro",b:"€€€",h:"Pionnier du mouvement"},
+  {name:"L'Ami Jean",arr:"7",nbh:"Invalides",lat:48.8583,lng:2.3063,c:"Basque",b:"€€€",h:"Convivial & généreux"},
+  {name:"Clown Bar",arr:"11",nbh:"Oberkampf",lat:48.8638,lng:2.3764,c:"Bistronomique",b:"€€€",h:"Vins nature iconique"},
+  {name:"Au Passage",arr:"11",nbh:"Oberkampf",lat:48.8641,lng:2.3694,c:"Tapas / partage",b:"€€",h:"Cave naturelle culte"},
+  {name:"Chez Georges",arr:"2",nbh:"Bourse",lat:48.8665,lng:2.3420,c:"Française classique",b:"€€€",h:"Bistrot parisien pur jus"},
+  {name:"Le Baratin",arr:"20",nbh:"Belleville",lat:48.8722,lng:2.3864,c:"Bistrot",b:"€€",h:"Local & nature"},
+  {name:"David Toutain",arr:"7",nbh:"Musée d'Orsay",lat:48.8619,lng:2.3175,c:"Gastronomique",b:"€€€€",h:"Créativité végétale"},
+  {name:"Le Grand Véfour",arr:"1",nbh:"Palais-Royal",lat:48.8649,lng:2.3373,c:"Gastronomique",b:"€€€€",h:"Monument historique"},
+  {name:"Bistrot Paul Bert",arr:"11",nbh:"Faidherbe",lat:48.8519,lng:2.3837,c:"Bistrot",b:"€€",h:"Steak-frites légendaire"},
+  {name:"Ober Mamma",arr:"11",nbh:"Bastille",lat:48.8569,lng:2.3730,c:"Italienne",b:"€€",h:"Pizza napolitaine"},
+  {name:"Sushi B",arr:"2",nbh:"Bourse",lat:48.8661,lng:2.3421,c:"Japonaise",b:"€€€€",h:"Omakase parisien"},
+  {name:"Miznon",arr:"4",nbh:"Marais",lat:48.8554,lng:2.3540,c:"Israélienne",b:"€",h:"Pitas cultes"},
+  {name:"Le Chateaubriand",arr:"11",nbh:"Parmentier",lat:48.8662,lng:2.3754,c:"Bistronomique",b:"€€€",h:"Avant-garde parisienne"},
+  {name:"Abri",arr:"10",nbh:"Poissonnière",lat:48.8744,lng:2.3499,c:"Japonaise-française",b:"€€",h:"Comptoir intime"},
+  {name:"Le Servan",arr:"11",nbh:"St-Maur",lat:48.8549,lng:2.3795,c:"Fusion",b:"€€€",h:"Sœurs Levha"},
+  {name:"Yard",arr:"20",nbh:"Ménilmontant",lat:48.8686,lng:2.3906,c:"Moderne",b:"€€",h:"Ambiance rock"},
+  {name:"Baieta",arr:"5",nbh:"Panthéon",lat:48.8481,lng:2.3478,c:"Méditerranéenne",b:"€€€",h:"Cuisine de la mer niçoise"},
+  {name:"Carbón",arr:"9",nbh:"Pigalle",lat:48.8820,lng:2.3375,c:"Espagnole-moderne",b:"€€€",h:"Braises & partage"}
+];
+
+function initBrowseMap() {
+  bMap = L.map('browse-map',{zoomControl:true,attributionControl:false}).setView([48.8566,2.3522],13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(bMap);
+  renderBMarkers(SEED);
+}
+
+function renderBMarkers(list) {
+  bMarkers.forEach(m=>bMap.removeLayer(m));
+  bMarkers=[];
+  list.forEach(r=>{
+    const icon=L.divIcon({html:`<div style="background:#D4A853;color:#0F0E0B;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;border:2px solid rgba(255,255,255,0.15);box-shadow:0 2px 10px rgba(0,0,0,0.5);">🍽</div>`,className:'',iconSize:[28,28],iconAnchor:[14,14]});
+    const m=L.marker([r.lat,r.lng],{icon}).addTo(bMap);
+    m.bindPopup(`<div class="popup-name">${r.name}</div><div class="popup-meta">${r.arr}ème · ${r.nbh}<br>${r.c} · ${r.b}<br><em style="color:#D4A853">${r.h}</em></div>`);
+    m.on('click',()=>hlCard(r.name));
+    bMarkers.push(m);
+  });
+  renderBList(list);
+}
+
+function filterArr(el,arr) {
+  document.querySelectorAll('.ac').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  const filtered=arr==='all'?SEED:SEED.filter(r=>r.arr===arr);
+  renderBMarkers(filtered);
+  if(arr!=='all' && filtered.length && bMap) bMap.flyTo([filtered[0].lat,filtered[0].lng],14,{duration:0.6});
+}
+
+function renderBList(list) {
+  const p=document.getElementById('browse-list');
+  if(!list.length){p.innerHTML='<div class="bl-empty">Aucun restaurant dans cet arrondissement</div>';return;}
+  p.innerHTML=`<div class="bl-hdr">${list.length} restaurant${list.length>1?'s':''} · Cliquer pour localiser</div>`+
+    list.map(r=>`<div class="bl-card" id="bc-${r.name.replace(/\W/g,'_')}" onclick="flyTo(${r.lat},${r.lng})">
+      <div class="bl-name">${r.name}</div>
+      <div class="bl-row">
+        <span class="bl-tag">${r.nbh} · ${r.arr}ème</span>
+        <span class="bl-tag gold">${r.c}</span>
+        <span class="bl-tag">${r.b}</span>
+      </div>
+    </div>`).join('');
+}
+
+function flyTo(lat,lng) { if(bMap) bMap.flyTo([lat,lng],16,{duration:0.7}); }
+function hlCard(name) {
+  const id='bc-'+name.replace(/\W/g,'_');
+  const el=document.getElementById(id);
+  if(el){el.scrollIntoView({behavior:'smooth',block:'nearest'});el.style.background='var(--surface2)';setTimeout(()=>el.style.background='',900);}
+}
+</script>
+</body>
+</html>
