@@ -501,10 +501,10 @@ async function findRestaurants() {
   document.getElementById('r-summary').textContent=`${pName} · €${budget}/pers · ${travel} min max`;
   document.getElementById('r-content').innerHTML=`<div class="loading"><div class="l-spin"></div><div class="l-txt">Recherche des meilleures tables…</div><div class="l-subtxt">Consultation de Google, Le Fooding, Reddit, guides en ligne…</div></div>`;
 
-  const prompt=`You are the most authoritative Paris dining expert — equal parts Le Fooding editor, Omnivore critic, Falstaff contributor, and r/paris power user. You have access to web search — USE IT to look up current Google review scores, recent coverage in Le Fooding, Falstaff, Eater Paris, Time Out Paris, Reddit r/paris and r/food, and TripAdvisor before making your recommendations. Search for each restaurant you are considering to verify it is still open, get current scores, and find recent diner opinions.
+  const prompt=`You are the most knowledgeable Paris dining expert — equal parts Le Fooding editor, Omnivore critic, Falstaff contributor, and r/paris veteran. You have deep knowledge of Paris restaurants from Le Fooding, Omnivore, Eater Paris, Time Out Paris, Reddit r/paris, TripAdvisor, Google reviews, and Falstaff.
 
-User criteria:
-- Starting point: ${pName} (coordinates: ${pLat}, ${pLng})
+USER CRITERIA:
+- Starting point: ${pName} (lat ${pLat}, lng ${pLng})
 - Max metro/RER travel time: ${travel} minutes
 - Day of visit: ${day}
 - Group: ${group}
@@ -514,41 +514,43 @@ User criteria:
 - Atmosphere: ${atmo.length?atmo.join(', '):'any'}
 - Special requirements: ${extras.length?extras.join(', '):'none'}
 
-Instructions:
-- Recommend exactly 4 restaurants that genuinely match the criteria
-- Search the web to verify each is currently open and gather real review scores
-- Be geographically realistic about metro travel time from ${pName}
-- Factor in the day of week — many Paris restaurants close Mon/Tue
-- Mix a well-known address with lesser-known gems
-- For pros and cons: draw on actual recurring themes from real diner reviews, not generic observations
+INSTRUCTIONS:
+- Recommend exactly 4 specific real Paris restaurants matching the criteria
+- Be geographically accurate — only include restaurants reachable in ${travel} min by metro from ${pName}
+- Consider the day of week carefully (many Paris restaurants close Mon/Tue)
+- For scores: provide your best knowledge of typical Google/TripAdvisor ratings for each restaurant
+- For pros/cons: draw on well-known recurring themes from real diner reviews of each specific restaurant
+- Mix one iconic address with lesser-known gems
+- Keep all string values concise — no apostrophes or special chars that could break JSON
 
-Respond ONLY with valid JSON — no markdown, no backticks, no text outside the JSON:
+YOUR RESPONSE MUST BE ONLY A JSON OBJECT. Start your response with { and end with }. Zero words before or after. No markdown. No backticks. No explanation.
+
 {
-  "intro": "One evocative sentence framing these picks",
+  "intro": "One short evocative sentence framing these picks",
   "restaurants": [
     {
       "name": "Restaurant Name",
-      "arrondissement": "e.g. 11ème",
-      "neighbourhood": "e.g. Charonne",
-      "match": "e.g. 96%",
-      "why": "2-3 sentences on what makes it exceptional and why it fits this brief perfectly.",
-      "cuisine_tags": ["tag1","tag2","tag3"],
-      "highlight_tag": "one standout quality in 3-5 words",
+      "arrondissement": "11ème",
+      "neighbourhood": "Charonne",
+      "match": "94%",
+      "why": "2-3 sentences on what makes it exceptional and why it fits this brief.",
+      "cuisine_tags": ["Bistronomique","Vins nature","Produits frais"],
+      "highlight_tag": "Meilleur bistro de Paris",
       "scores": [
-        {"source": "Google", "score": "4.6★", "count": "1,200 avis"},
-        {"source": "Le Fooding", "score": "Recommandé", "count": ""},
-        {"source": "TripAdvisor", "score": "4.5★", "count": "850 avis"}
+        {"source": "Google", "score": "4.6", "count": "1200 avis"},
+        {"source": "Le Fooding", "score": "Recommande", "count": ""},
+        {"source": "TripAdvisor", "score": "4.5", "count": "850 avis"}
       ],
-      "pros": ["Specific strength from real reviews", "Another genuine positive", "Third standout positive"],
-      "cons": ["Honest weakness from diner feedback", "Second real caveat", "Third genuine limitation"],
-      "budget_reality": "e.g. €55-75pp with wine",
-      "metro_route": "e.g. ~20 min · M4 dir Montrouge → M9 dir Montreuil, sortie Voltaire",
-      "day_note": "e.g. Ouvert jeudi. Réserver 2 semaines à l'avance sur TheFork",
-      "group_note": "e.g. Tables intimes pour 2 — idéal en couple",
+      "pros": ["Strength one from real reviews", "Strength two", "Strength three"],
+      "cons": ["Weakness one from real feedback", "Weakness two", "Weakness three"],
+      "budget_reality": "55-75 euros par personne avec vin",
+      "metro_route": "~20 min depuis Alesia: M4 dir Montrouge puis M9 dir Montreuil sortie Voltaire",
+      "day_note": "Ouvert jeudi. Reserver 2 semaines a l avance sur TheFork",
+      "group_note": "Tables intimes pour 2, ideal en couple",
       "terrace": false,
       "walk_in": false,
-      "best_for": "e.g. Un vrai dîner romantique dans l'Est parisien",
-      "sources_searched": "e.g. Google Maps, Le Fooding, Reddit r/paris, TripAdvisor"
+      "best_for": "Un vrai diner romantique dans l Est parisien",
+      "sources_searched": "Le Fooding, Google Maps, Reddit r/paris, TripAdvisor"
     }
   ]
 }`;
@@ -559,14 +561,23 @@ Respond ONLY with valid JSON — no markdown, no backticks, no text outside the 
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
         model:"claude-sonnet-4-20250514",
-        max_tokens:4000,
+        max_tokens:3000,
+        system:"You are a Paris restaurant expert API. You respond ONLY with a valid JSON object — no markdown, no backticks, no prose. Your entire response must be parseable by JSON.parse(). Start with { and end with }. Never use special characters like apostrophes, accented letters, em-dashes, or arrows inside JSON string values — use plain ASCII only.",
         messages:[{role:"user",content:prompt}]
       })
     });
-    if(!res.ok) throw new Error(`API ${res.status}`);
-    const data=await res.json();
-    const raw=data.content.map(b=>b.text||'').join('');
-    const parsed=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    if(!res.ok) {
+      const errData = await res.json().catch(()=>({}));
+      throw new Error(`API ${res.status}: ${JSON.stringify(errData.error||errData).slice(0,120)}`);
+    }
+    const data = await res.json();
+    const raw = (data.content||[]).map(b=>b.text||'').join('').trim();
+    // Extract JSON object robustly
+    const start = raw.indexOf('{');
+    const end = raw.lastIndexOf('}');
+    if (start === -1 || end === -1) throw new Error('No JSON object found in response');
+    const jsonStr = raw.slice(start, end+1);
+    const parsed = JSON.parse(jsonStr);
     renderResults(parsed);
   } catch(e) {
     document.getElementById('r-content').innerHTML=`<div class="results-wrap"><div class="err-box"><strong>Erreur —</strong> impossible de charger les recommandations. Veuillez réessayer.<br><small style="opacity:.7;margin-top:6px;display:block;">${e.message}</small></div></div>`;
