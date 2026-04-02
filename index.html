@@ -517,14 +517,21 @@ NAME | arrondissement | Google X.X/5 (N reviews) | price range | open ${day}: ye
 
 Limit your entire response to 800 words maximum. No prose, just the compact lines above.`;
 
-    const searchRes = await fetch(`${WORKER}/search`, {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({ query: searchQuery, max_tokens: 800 })
-    });
-    if (!searchRes.ok) throw new Error(`Search ${searchRes.status}`);
-    const searchData = await searchRes.json();
-    const research = searchData.research || "";
+    let research = "";
+    try {
+      const searchRes = await fetch(`${WORKER}/search`, {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({ query: searchQuery, max_tokens: 800 })
+      });
+      if (searchRes.ok) {
+        const searchData = await searchRes.json();
+        research = searchData.research || "";
+      }
+      // If search fails, research stays "" and Phase 2 uses knowledge only
+    } catch(searchErr) {
+      // silently fall through to knowledge-only mode
+    }
 
     // ── PHASE 2: Format research into strict JSON ──
     // Cap research to stay under 30k token/min rate limit, then wait for window to clear
