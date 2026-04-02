@@ -544,33 +544,45 @@ Write a detailed research summary with all findings. Be specific with numbers an
     // ── PHASE 2: Format research into strict JSON ──
     setLoading('Analyse des résultats…', 'Compilation des avis et scores…');
 
-    const formatPrompt = `You are a JSON API. Convert the restaurant research below into the exact JSON structure shown. Output ONLY the JSON object — start with { end with }. No words before or after. No markdown. No backticks. Use only ASCII characters in all string values — no accents, no apostrophes, no special punctuation, no arrows, no em-dashes.
+    // Sanitize research text so it survives JSON.stringify embedding
+    const safeResearch = research
+      .replace(/\\/g, ' ')
+      .replace(/[\u0000-\u001F]/g, ' ')
+      .slice(0, 6000); // cap length
 
-RESEARCH FINDINGS:
-${research}
+    const formatPrompt = `Convert the restaurant research below into the JSON structure shown. Output ONLY the JSON — start with { end with }. No words before or after. No markdown. No backticks. Use only plain ASCII in all string values.
 
-ADDITIONAL CONTEXT:
-- User is travelling from: ${pName}
-- Max travel time: ${travel} minutes by metro
-- Budget: up to ${budget} euros per person
-- Day: ${day}, Group: ${group}
+RESEARCH:
+${safeResearch}
 
-OUTPUT THIS EXACT JSON STRUCTURE with 4 restaurants:
-{"intro":"one short sentence","restaurants":[{"name":"string","arrondissement":"string","neighbourhood":"string","match":"string e.g. 94%","why":"2-3 sentences","cuisine_tags":["string","string","string"],"highlight_tag":"string","scores":[{"source":"Google","score":"4.5","count":"800 avis"},{"source":"Le Fooding","score":"Recommande","count":""}],"pros":["string","string","string"],"cons":["string","string","string"],"budget_reality":"string","metro_route":"string","day_note":"string","group_note":"string","terrace":false,"walk_in":false,"best_for":"string","sources_searched":"string"}]}`;
+CONTEXT: from ${pName}, max ${travel} min metro, budget ${budget} euros, day ${day}, group ${group}
 
-    const fmtRes = await fetch(`${WORKER}/`, {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
+JSON STRUCTURE (4 restaurants):
+{"intro":"string","restaurants":[{"name":"string","arrondissement":"string","neighbourhood":"string","match":"string","why":"string","cuisine_tags":["string","string"],"highlight_tag":"string","scores":[{"source":"Google","score":"4.5","count":"800 avis"}],"pros":["string","string","string"],"cons":["string","string","string"],"budget_reality":"string","metro_route":"string","day_note":"string","group_note":"string","terrace":false,"walk_in":false,"best_for":"string","sources_searched":"string"}]}`;
+
+    let fmtRes, fmtData, raw;
+    try {
+      const fmtBody = JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 3000,
-        system: "You are a JSON formatting API. Your entire response is a single valid JSON object and nothing else. Start with { and end with }. Use only ASCII characters — no accents, no apostrophes, no special punctuation.",
+        system: "You are a JSON API. Respond with a single valid JSON object only. Start with { and end with }. Plain ASCII only in all string values.",
         messages: [{role:"user", content: formatPrompt}]
-      })
-    });
-    if (!fmtRes.ok) throw new Error(`Format ${fmtRes.status}`);
-    const fmtData = await fmtRes.json();
-    const raw = (fmtData.content||[]).map(b=>b.text||'').join('').trim();
+      });
+
+      fmtRes = await fetch(`${WORKER}/`, {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: fmtBody
+      });
+
+      const fmtText = await fmtRes.text();
+      if (!fmtRes.ok) throw new Error(`Format ${fmtRes.status}: ${fmtText.slice(0,200)}`);
+      fmtData = JSON.parse(fmtText);
+    } catch(fetchErr) {
+      throw new Error(`Format call failed: ${fetchErr.message}`);
+    }
+
+    raw = (fmtData.content||[]).map(b=>b.text||'').join('').trim();
 
     const start = raw.indexOf('{');
     const end = raw.lastIndexOf('}');
