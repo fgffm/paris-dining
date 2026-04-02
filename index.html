@@ -510,32 +510,17 @@ async function findRestaurants() {
     // ── PHASE 1: Live web search for current data ──
     setLoading('Recherche en cours…', 'Consultation de Google, Le Fooding, Reddit, TripAdvisor…');
 
-    const searchQuery = `Search the web now for the best Paris restaurants matching these criteria:
-- Location reachable in ${travel} minutes by metro from ${pName} Paris
-- Day of visit: ${day} (check opening days carefully)
-- Group size: ${group}
-- Cuisine type: ${cuisine.length ? cuisine.join(', ') : 'any excellent cuisine'}
-- Dining level: ${niveau.length ? niveau.join(', ') : 'any level'}
-- Budget: up to ${budget} euros per person including drinks
-- Atmosphere: ${atmo.length ? atmo.join(', ') : 'any'}
-- Special needs: ${extras.length ? extras.join(', ') : 'none'}
+    const searchQuery = `Find 4 Paris restaurants: reachable in ${travel} min metro from ${pName}, open on ${day}, budget ${budget} euros/person, cuisine: ${cuisine.length ? cuisine.join(', ') : 'any'}, level: ${niveau.length ? niveau.join(', ') : 'any'}, group: ${group}.
 
-Search for: current Google review scores, Le Fooding recommendations, Reddit r/paris recent mentions, TripAdvisor ratings, Falstaff Paris coverage, Eater Paris lists.
+Search Google Maps ratings, Le Fooding, Reddit r/paris, TripAdvisor. For each restaurant output ONLY this compact format:
+NAME | arrondissement | Google X.X/5 (N reviews) | price range | open ${day}: yes/no | pro1, pro2 | con1, con2 | guide mentions
 
-For each of 4-5 candidate restaurants, find and report:
-1. Current Google star rating and number of reviews
-2. Whether Le Fooding, Falstaff or other guides mention it
-3. Recent Reddit or forum comments about it
-4. Whether it is open on ${day}
-5. Real pros and cons from recent diner reviews
-6. Realistic price per person
-
-Write a detailed research summary with all findings. Be specific with numbers and quotes.`;
+Limit your entire response to 800 words maximum. No prose, just the compact lines above.`;
 
     const searchRes = await fetch(`${WORKER}/search`, {
       method: "POST",
       headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({ query: searchQuery, max_tokens: 3000 })
+      body: JSON.stringify({ query: searchQuery, max_tokens: 800 })
     });
     if (!searchRes.ok) throw new Error(`Search ${searchRes.status}`);
     const searchData = await searchRes.json();
@@ -549,7 +534,7 @@ Write a detailed research summary with all findings. Be specific with numbers an
       .slice(0, 2000);
 
     setLoading('Analyse des résultats…', 'Patientez quelques secondes…');
-    await new Promise(r => setTimeout(r, 6000));
+    await new Promise(r => setTimeout(r, 15000));
 
     const formatPrompt = `Convert the restaurant research below into the JSON structure shown. Output ONLY the JSON — start with { end with }. No words before or after. No markdown. No backticks. Use only plain ASCII in all string values.
 
