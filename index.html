@@ -501,94 +501,63 @@ async function findRestaurants() {
   const extras = getOn('g-extras');
 
   document.getElementById('cta').disabled=true;
-  document.getElementById('cta').textContent='Recherche…';
+  document.getElementById('cta').textContent='Recherche...';
   document.getElementById('form-view').style.display='none';
   document.getElementById('results-view').style.display='block';
-  document.getElementById('r-summary').textContent=`${pName} · €${budget}/pers · ${travel} min max`;
+  document.getElementById('r-summary').textContent=`${pName} - ${budget} euros/pers - ${travel} min max`;
+  setLoading('Recherche des meilleures tables...', 'Consultation de nos sources parisiennes...');
+
+  const today = new Date().toLocaleDateString('fr-FR', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+
+  const prompt = `You are a Paris dining expert with deep knowledge of Le Fooding, Omnivore, Falstaff, Eater Paris, Reddit r/paris, Google reviews and TripAdvisor up to early 2025.
+
+Today is ${today}. Recommend 4 real Paris restaurants for:
+- From: ${pName} - max ${travel} min by metro
+- Day: ${day} (check closures carefully - many Paris restaurants close Mon/Tue)
+- Group: ${group}
+- Cuisine: ${cuisine.length ? cuisine.join(', ') : 'any excellent cuisine'}
+- Level: ${niveau.length ? niveau.join(', ') : 'any'}
+- Budget: up to ${budget} euros per person including drinks
+- Atmosphere: ${atmo.length ? atmo.join(', ') : 'any'}
+- Extras: ${extras.length ? extras.join(', ') : 'none'}
+
+For scores: give your best knowledge of each restaurant Google and TripAdvisor ratings.
+For pros/cons: cite specific well-known recurring themes from real diner reviews of each restaurant.
+Be geographically precise about metro routes from ${pName}.
+
+CRITICAL: respond with ONLY a JSON object. Nothing before {. Nothing after }. No markdown. No backticks. ASCII only in strings - no accented characters, no apostrophes, no special punctuation.
+
+{"intro":"string","restaurants":[{"name":"string","arrondissement":"string","neighbourhood":"string","match":"string","why":"string","cuisine_tags":["string","string","string"],"highlight_tag":"string","scores":[{"source":"Google","score":"4.5","count":"800 avis"},{"source":"Le Fooding","score":"Recommande","count":""}],"pros":["string","string","string"],"cons":["string","string","string"],"budget_reality":"string","metro_route":"string","day_note":"string","group_note":"string","terrace":false,"walk_in":false,"best_for":"string","sources_searched":"string"}]}`;
 
   try {
-    // ── PHASE 1: Live web search for current data ──
-    setLoading('Recherche en cours…', 'Consultation de Google, Le Fooding, Reddit, TripAdvisor…');
-
-    const searchQuery = `Find 4 Paris restaurants: reachable in ${travel} min metro from ${pName}, open on ${day}, budget ${budget} euros/person, cuisine: ${cuisine.length ? cuisine.join(', ') : 'any'}, level: ${niveau.length ? niveau.join(', ') : 'any'}, group: ${group}.
-
-Search Google Maps ratings, Le Fooding, Reddit r/paris, TripAdvisor. For each restaurant output ONLY this compact format:
-NAME | arrondissement | Google X.X/5 (N reviews) | price range | open ${day}: yes/no | pro1, pro2 | con1, con2 | guide mentions
-
-Limit your entire response to 800 words maximum. No prose, just the compact lines above.`;
-
-    let research = "";
-    try {
-      const searchRes = await fetch(`${WORKER}/search`, {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify({ query: searchQuery, max_tokens: 800 })
-      });
-      if (searchRes.ok) {
-        const searchData = await searchRes.json();
-        research = searchData.research || "";
-      }
-      // If search fails, research stays "" and Phase 2 uses knowledge only
-    } catch(searchErr) {
-      // silently fall through to knowledge-only mode
+    const res = await fetch(`${WORKER}/`, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 2500,
+        system: "You are a JSON API. Output only a valid JSON object. Start with { and end with }. No text before or after. ASCII only in all string values.",
+        messages: [{role:"user", content: prompt}]
+      })
+    });
+    if (!res.ok) {
+      const t = await res.text();
+      throw new Error(`API ${res.status}: ${t.slice(0,150)}`);
     }
-
-    // ── PHASE 2: Format research into strict JSON ──
-    // Cap research to stay under 30k token/min rate limit, then wait for window to clear
-    const safeResearch = research
-      .replace(/\\/g, ' ')
-      .replace(/[\u0000-\u001F]/g, ' ')
-      .slice(0, 2000);
-
-    setLoading('Analyse des résultats…', 'Patientez quelques secondes…');
-    await new Promise(r => setTimeout(r, 15000));
-
-    const formatPrompt = `Convert the restaurant research below into the JSON structure shown. Output ONLY the JSON — start with { end with }. No words before or after. No markdown. No backticks. Use only plain ASCII in all string values.
-
-RESEARCH:
-${safeResearch}
-
-CONTEXT: from ${pName}, max ${travel} min metro, budget ${budget} euros, day ${day}, group ${group}
-
-JSON STRUCTURE (4 restaurants):
-{"intro":"string","restaurants":[{"name":"string","arrondissement":"string","neighbourhood":"string","match":"string","why":"string","cuisine_tags":["string","string"],"highlight_tag":"string","scores":[{"source":"Google","score":"4.5","count":"800 avis"}],"pros":["string","string","string"],"cons":["string","string","string"],"budget_reality":"string","metro_route":"string","day_note":"string","group_note":"string","terrace":false,"walk_in":false,"best_for":"string","sources_searched":"string"}]}`;
-
-    let fmtRes, fmtData, raw;
-    try {
-      const fmtBody = JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 3000,
-        system: "You are a JSON API. Respond with a single valid JSON object only. Start with { and end with }. Plain ASCII only in all string values.",
-        messages: [{role:"user", content: formatPrompt}]
-      });
-
-      fmtRes = await fetch(`${WORKER}/`, {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: fmtBody
-      });
-
-      const fmtText = await fmtRes.text();
-      if (!fmtRes.ok) throw new Error(`Format ${fmtRes.status}: ${fmtText.slice(0,200)}`);
-      fmtData = JSON.parse(fmtText);
-    } catch(fetchErr) {
-      throw new Error(`Format call failed: ${fetchErr.message}`);
-    }
-
-    raw = (fmtData.content||[]).map(b=>b.text||'').join('').trim();
-
-    const start = raw.indexOf('{');
-    const end = raw.lastIndexOf('}');
-    if (start === -1 || end === -1) throw new Error('No JSON found in response');
-    const parsed = JSON.parse(raw.slice(start, end+1));
+    const data = await res.json();
+    const raw = (data.content||[]).map(b=>b.text||'').join('').trim();
+    const s = raw.indexOf('{');
+    const e = raw.lastIndexOf('}');
+    if (s===-1||e===-1) throw new Error('No JSON in response');
+    const parsed = JSON.parse(raw.slice(s, e+1));
     renderResults(parsed);
-
   } catch(e) {
-    document.getElementById('r-content').innerHTML=`<div class="results-wrap"><div class="err-box"><strong>Erreur —</strong> impossible de charger les recommandations. Veuillez reessayer.<br><small style="opacity:.7;margin-top:6px;display:block;">${e.message}</small></div></div>`;
+    document.getElementById('r-content').innerHTML=`<div class="results-wrap"><div class="err-box"><strong>Erreur</strong> - impossible de charger les recommandations. Veuillez reessayer.<br><small style="opacity:.7;margin-top:6px;display:block;">${e.message}</small></div></div>`;
   }
   document.getElementById('cta').disabled=false;
-  document.getElementById('cta').textContent='Trouver mes restaurants →';
+  document.getElementById('cta').textContent='Trouver mes restaurants ->';
 }
+
 
 function renderResults(d) {
   let h='';
