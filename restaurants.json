@@ -1,0 +1,5415 @@
+{
+  "generated_at": "2026-04-08T14:28:10.592Z",
+  "arrondissements": {
+    "1": [
+      {
+        "name": "Frenchie",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Sentier",
+        "lat": 48.8622,
+        "lng": 2.351,
+        "cuisine": "French Contemporary",
+        "budget_tier": "eee",
+        "highlight": "Inventive French cooking, minimal frills",
+        "why": "Chef Gregory Marchand creates playful, technically precise dishes in an intimate 40-seat dining room. One of Paris's most celebrated bistros with consistent acclaim across all major guides.",
+        "cuisine_tags": [
+          "French",
+          "Contemporary",
+          "Bistro"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative flavor combinations",
+          "Knowledgeable service",
+          "Excellent wine selection"
+        ],
+        "cons": [
+          "Very difficult reservations",
+          "Small space feels cramped",
+          "Expensive for portion sizes"
+        ],
+        "budget_reality": "60-85 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Septime La Cave",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Sentier",
+        "lat": 48.8619,
+        "lng": 2.3515,
+        "cuisine": "Natural Wine & Charcuterie",
+        "budget_tier": "ee",
+        "highlight": "Natural wines paired with quality charcuterie",
+        "why": "Sibling wine bar to the acclaimed Septime in the 11e, focusing on small-producer natural wines and artisanal cold cuts. Perfect for casual drinking and light eating with genuine expertise.",
+        "cuisine_tags": [
+          "Wine Bar",
+          "Charcuterie",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "650 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional wine list",
+          "Friendly casual atmosphere",
+          "Quality charcuterie boards"
+        ],
+        "cons": [
+          "Limited seating",
+          "Can be very crowded",
+          "Short food menu"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ferme lundi et dimanche",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "L'Ami Jean",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Louvre",
+        "lat": 48.8603,
+        "lng": 2.3385,
+        "cuisine": "French Bistro Classique",
+        "budget_tier": "ee",
+        "highlight": "Traditional French comfort food, family-run",
+        "why": "Historic neighborhood bistro serving honest, unpretentious French cooking with strong local following. Maintains authentic charm while attracting serious food lovers seeking genuine Parisian bistro experience.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "900 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "350 reviews"
+          }
+        ],
+        "pros": [
+          "Authentic bistro atmosphere",
+          "Reasonable prices",
+          "Consistent quality"
+        ],
+        "cons": [
+          "Service can be slow",
+          "Can feel touristy at peak times",
+          "Limited wine selection"
+        ],
+        "budget_reality": "30-45 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, TripAdvisor"
+      },
+      {
+        "name": "Maceo",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Palais Royal",
+        "lat": 48.8648,
+        "lng": 2.3368,
+        "cuisine": "Modern European",
+        "budget_tier": "eee",
+        "highlight": "Refined European cuisine, wine-focused design",
+        "why": "William Ledeuil's sophisticated restaurant in a historic 18th-century townhouse with remarkable wine storage visible throughout dining room. Elegant setting combining architectural beauty with contemporary French technique.",
+        "cuisine_tags": [
+          "European",
+          "Modern",
+          "Fine Dining"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "420 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Stunning interior design",
+          "Excellent wine program",
+          "Quality plating and technique"
+        ],
+        "cons": [
+          "Very expensive for portions",
+          "Can feel overly formal",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "75-110 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Falstaff"
+      },
+      {
+        "name": "Clown Bar",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Sentier",
+        "lat": 48.8638,
+        "lng": 2.3528,
+        "cuisine": "Contemporary French",
+        "budget_tier": "eee",
+        "highlight": "Michelin-starred, playful decor and refined cooking",
+        "why": "Historic circus-themed restaurant earning Michelin star for inventive contemporary French cooking. Eclectic vintage circus decor provides theatrical backdrop to serious, technically skilled cuisine.",
+        "cuisine_tags": [
+          "French",
+          "Contemporary",
+          "Michelin"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "580 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative plating",
+          "Michelin recognition",
+          "Unique atmospheric setting"
+        ],
+        "cons": [
+          "Decor can feel gimmicky",
+          "Expensive for what is served",
+          "Service pace inconsistent"
+        ],
+        "budget_reality": "65-95 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Michelin Guide, Google Reviews"
+      },
+      {
+        "name": "Muscade",
+        "arrondissement": "1er",
+        "arr_num": "1",
+        "neighbourhood": "Sentier",
+        "lat": 48.8625,
+        "lng": 2.3505,
+        "cuisine": "French Bistro",
+        "budget_tier": "e",
+        "highlight": "Budget-friendly neighborhood bistro, quality cooking",
+        "why": "Small friendly bistro offering genuine French food at accessible prices in the increasingly gentrified Sentier. Represents real neighborhood dining without pretension or premium markup.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "240 avis"
+          },
+          {
+            "source": "Reddit r/paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Very affordable",
+          "Genuine local crowd",
+          "Friendly owner",
+          "Quality meat dishes"
+        ],
+        "cons": [
+          "Tiny space, hard to get reservations",
+          "No-nonsense service",
+          "Limited desserts"
+        ],
+        "budget_reality": "20-35 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris"
+      }
+    ],
+    "2": [
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Sentier",
+        "lat": 48.8656,
+        "lng": 2.3521,
+        "cuisine": "French bistro",
+        "budget_tier": "€€",
+        "highlight": "Casual sibling of Michelin star chef",
+        "why": "Gregory Marchand's casual concept delivers refined French cuisine in a relaxed setting. Known for excellent charcuterie, cheese, and seasonal small plates that punch above their price point.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Charcuterie"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent value for quality",
+          "Quick service",
+          "Great natural wines",
+          "Lively atmosphere"
+        ],
+        "cons": [
+          "No reservations, long queues",
+          "Tight seating",
+          "Can be noisy"
+        ],
+        "budget_reality": "18-28 euros par personne",
+        "day_note": "Open daily, lunch and dinner",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Passage 53",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Bourse",
+        "lat": 48.8686,
+        "lng": 2.3415,
+        "cuisine": "French contemporary",
+        "budget_tier": "€€€€",
+        "highlight": "Two Michelin stars, intimate tasting menu",
+        "why": "Chef Shinichi Sato creates precise, artistic French cuisine using impeccable ingredients in his 10-seat dining room. One of Paris's most sought-after reservations with consistent acclaim from all major guides.",
+        "cuisine_tags": [
+          "French",
+          "Fine dining",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "280 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "2 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Two Michelin stars",
+          "Immaculate plating",
+          "Exceptional service",
+          "Intimate setting"
+        ],
+        "cons": [
+          "Very expensive",
+          "Limited availability",
+          "No flexibility on menu",
+          "Small portions for price"
+        ],
+        "budget_reality": "180-220 euros par personne",
+        "day_note": "Ferme dimanche et lundi, reservation obligatoire",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Daroco",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Sentier",
+        "lat": 48.8655,
+        "lng": 2.3495,
+        "cuisine": "Italian",
+        "budget_tier": "€€€",
+        "highlight": "Refined Italian pasta and natural wines",
+        "why": "An elegant Italian restaurant focused on house-made pasta and quality ingredients from owner chef Armando Pascucci. Natural wine program is thoughtfully curated, attracting serious wine enthusiasts.",
+        "cuisine_tags": [
+          "Italian",
+          "Pasta",
+          "Natural wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "650 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent pasta",
+          "Outstanding wine list",
+          "Attentive service",
+          "Charming ambiance"
+        ],
+        "cons": [
+          "Can be pricey",
+          "Limited seating",
+          "Reservation essential",
+          "Noise levels high"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Ferme lundi et mardi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Septime La Cave",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Bourse",
+        "lat": 48.8679,
+        "lng": 2.3402,
+        "cuisine": "French wine bar",
+        "budget_tier": "€€",
+        "highlight": "Wine bar from Septime team",
+        "why": "Sister concept to the acclaimed Septime restaurant, focusing on organic and natural wines with simple, quality charcuterie and cheese. Perfect for casual wine appreciation with knowledgeable staff.",
+        "cuisine_tags": [
+          "Wine bar",
+          "Natural wine",
+          "Charcuterie"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "420 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding wine selection",
+          "Friendly staff",
+          "Great value",
+          "Relaxed vibe",
+          "Good for groups"
+        ],
+        "cons": [
+          "Can be crowded",
+          "Limited food selection",
+          "No reservations for small groups",
+          "Casual setting"
+        ],
+        "budget_reality": "20-35 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Yam'Tcha",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Sentier",
+        "lat": 48.8642,
+        "lng": 2.3538,
+        "cuisine": "French-Asian fusion",
+        "budget_tier": "€€€",
+        "highlight": "Michelin star fusion with tea pairings",
+        "why": "Chef Adeline Grartner blends French technique with Asian influences, complemented by a unique tea pairing program. The intimate 20-seat space and refined execution earned its Michelin star.",
+        "cuisine_tags": [
+          "Fusion",
+          "Asian-French",
+          "Tea pairing"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "380 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "One Michelin star",
+          "Unique tea pairings",
+          "Creative cuisine",
+          "Excellent service",
+          "Intimate"
+        ],
+        "cons": [
+          "Expensive for value",
+          "Small portions",
+          "Limited menu options",
+          "Difficult reservations"
+        ],
+        "budget_reality": "95-130 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Pirouette",
+        "arrondissement": "2ème",
+        "arr_num": "2",
+        "neighbourhood": "Les Halles",
+        "lat": 48.8613,
+        "lng": 2.3456,
+        "cuisine": "French contemporary",
+        "budget_tier": "€€€",
+        "highlight": "Market-driven bistro with Michelin star",
+        "why": "Elegant neighborhood bistro with one Michelin star, focusing on seasonal ingredients and classical French techniques. Chef Christophe Saintagne creates refined dishes in a warm, approachable setting.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "550 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "One Michelin star",
+          "Excellent value",
+          "Warm welcome",
+          "Refined without pretension",
+          "Good wine list"
+        ],
+        "cons": [
+          "Small dining room",
+          "Reservation required",
+          "Can feel rushed",
+          "Limited menu"
+        ],
+        "budget_reality": "65-85 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews, Eater Paris"
+      }
+    ],
+    "3": [
+      {
+        "name": "L'As du Fallafel",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Le Marais",
+        "lat": 48.8615,
+        "lng": 2.3587,
+        "cuisine": "Israeli-Middle Eastern",
+        "budget_tier": "EUR 1",
+        "highlight": "Best falafel in Paris, legendary",
+        "why": "This iconic Rue des Rosiers institution has perfected the art of the falafel sandwich over decades. A genuine neighborhood institution where locals queue for exceptional quality at rock-bottom prices.",
+        "cuisine_tags": [
+          "falafel",
+          "hummus",
+          "street food"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "2100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "450 avis"
+          }
+        ],
+        "pros": [
+          "crispy exterior perfect crumb",
+          "authentic family recipes",
+          "incredible value for money"
+        ],
+        "cons": [
+          "standing room only mostly",
+          "can be very crowded midday",
+          "limited seating options"
+        ],
+        "budget_reality": "8-12 euros par personne",
+        "day_note": "Ferme samedi et dimanche",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Breizh Cafe",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Le Marais",
+        "lat": 48.8617,
+        "lng": 2.3595,
+        "cuisine": "Breton Crepes",
+        "budget_tier": "EUR 2",
+        "highlight": "Organic buckwheat crepes done right",
+        "why": "Award-winning creperie using exclusively organic, high-quality ingredients sourced directly from Brittany. The savory galettes are architectural masterpieces with proper texture and flavor balance.",
+        "cuisine_tags": [
+          "crepes",
+          "galettes",
+          "organic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1800 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "exceptional ingredient quality",
+          "skilled preparation",
+          "excellent cider selection"
+        ],
+        "cons": [
+          "can have long waits during peak hours",
+          "slightly cramped seating arrangement",
+          "prices trending upward"
+        ],
+        "budget_reality": "16-24 euros par personne",
+        "day_note": "Ferme mardi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Chez Prune",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Canal Saint-Martin",
+        "lat": 48.8688,
+        "lng": 2.3613,
+        "cuisine": "French Bistro",
+        "budget_tier": "EUR 2",
+        "highlight": "Canal-side views with honest French food",
+        "why": "Beloved neighborhood bistro offering traditional French cuisine with unbeatable Canal Saint-Martin waterfront seating. The kitchen executes classic dishes with consistency and genuine technique.",
+        "cuisine_tags": [
+          "bistro",
+          "French classics",
+          "canal views"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "3200 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "680 avis"
+          }
+        ],
+        "pros": [
+          "beautiful terrace setting",
+          "reliable kitchen standards",
+          "reasonable prices for location"
+        ],
+        "cons": [
+          "can be touristy during summer months",
+          "slower service when crowded",
+          "limited interior space"
+        ],
+        "budget_reality": "22-35 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Eater Paris"
+      },
+      {
+        "name": "L'Ami Jean",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Le Marais",
+        "lat": 48.8608,
+        "lng": 2.3642,
+        "cuisine": "French Bistro-Comfort Food",
+        "budget_tier": "EUR 2",
+        "highlight": "Rustic French comfort food, wine focused",
+        "why": "Intimate neighborhood gem that prioritizes natural wine and classic French bistro fare executed with genuine care. The convivial atmosphere and knowledgeable staff make it feel like dining at a friend's table.",
+        "cuisine_tags": [
+          "natural wine",
+          "bistro",
+          "comfort food"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "950 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "excellent natural wine list",
+          "knowledgeable sommeliers",
+          "authentic neighborhood vibe"
+        ],
+        "cons": [
+          "very small space",
+          "no reservations accepted",
+          "noisy during service"
+        ],
+        "budget_reality": "28-40 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Omnivore, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Septime",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Le Marais",
+        "lat": 48.8601,
+        "lng": 2.3668,
+        "cuisine": "Contemporary French",
+        "budget_tier": "EUR 3",
+        "highlight": "Market-driven seasonal fine dining",
+        "why": "One of Paris's most respected restaurants, Septime practices daily market-driven cooking with refined technique and impeccable ingredient selection. The tasting menu showcases exceptional produce and wine pairings.",
+        "cuisine_tags": [
+          "seasonal",
+          "market cuisine",
+          "fine dining"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1400 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Tres recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "exceptional fresh seasonal ingredients",
+          "wine pairings very well considered",
+          "elegant minimalist setting"
+        ],
+        "cons": [
+          "reservations essential months ahead",
+          "prix fixe format only",
+          "no flexibility on allergies"
+        ],
+        "budget_reality": "65-85 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Michelin Guide, Eater Paris"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "3ème",
+        "arr_num": "3",
+        "neighbourhood": "Le Marais",
+        "lat": 48.8616,
+        "lng": 2.3574,
+        "cuisine": "French-American Casual",
+        "budget_tier": "EUR 2",
+        "highlight": "Chef Gregory Marchand casual sandwich venue",
+        "why": "The casual sister to celebrated Frenchie restaurant, this counter-service spot delivers chef-driven food at approachable prices. Creative sandwiches and bistro snacks with genuine culinary technique shine through.",
+        "cuisine_tags": [
+          "sandwiches",
+          "casual fine dining",
+          "French-American"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1600 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "380 avis"
+          }
+        ],
+        "pros": [
+          "chef-driven counter food",
+          "very affordable for quality",
+          "friendly energetic staff"
+        ],
+        "cons": [
+          "very limited seating",
+          "long queues at lunch",
+          "no reservations available"
+        ],
+        "budget_reality": "14-22 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Eater Paris, TripAdvisor"
+      }
+    ],
+    "4": [
+      {
+        "name": "L'As du Fallafel",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Rue des Rosiers, Marais",
+        "lat": 48.862,
+        "lng": 2.3625,
+        "cuisine": "Israeli/Middle Eastern",
+        "budget_tier": "euro sign",
+        "highlight": "Iconic falafel spot, legendary queues",
+        "why": "A Paris institution since 1986, this tiny jewel serves arguably the best falafel in the city with fresh pita and generous portions. Quick service, standing room only, total sensory experience of the Marais.",
+        "cuisine_tags": [
+          "falafel",
+          "israeli",
+          "street-food"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "2100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "1800 reviews"
+          }
+        ],
+        "pros": [
+          "Best falafel in Paris",
+          "Historic location with character",
+          "Extremely good value"
+        ],
+        "cons": [
+          "Always crowded",
+          "No seating",
+          "Can be slow during peak hours"
+        ],
+        "budget_reality": "8-15 euros par personne",
+        "day_note": "Open daily, lunch and dinner",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris, Le Fooding"
+      },
+      {
+        "name": "Breizh Cafe",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Rue de Rivoli, Marais",
+        "lat": 48.8608,
+        "lng": 2.359,
+        "cuisine": "Breton Crepes",
+        "budget_tier": "euro sign euro sign",
+        "highlight": "Artisanal buckwheat crepes, organic cider",
+        "why": "Lauded for organic buckwheat galettes and sweet crepes made with exceptional ingredients sourced from Brittany. Warm, casual atmosphere with knowledgeable staff explaining regional traditions.",
+        "cuisine_tags": [
+          "crepes",
+          "breton",
+          "organic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "High-quality ingredients",
+          "Great cider selection",
+          "Authentic preparation"
+        ],
+        "cons": [
+          "Small space gets crowded",
+          "Limited seating",
+          "Slow service during rush"
+        ],
+        "budget_reality": "12-22 euros par personne",
+        "day_note": "Closed Mondays",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Le Fooding, Eater Paris"
+      },
+      {
+        "name": "Chez Janou",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Place des Vosges, Marais",
+        "lat": 48.8618,
+        "lng": 2.3645,
+        "cuisine": "Provencal French",
+        "budget_tier": "euro sign euro sign euro sign",
+        "highlight": "Charming Provencal bistro, elegant courtyard",
+        "why": "Intimate provencal restaurant with rustic decor and refined cooking overlooking the arcades of Place des Vosges. Known for seasonal dishes with Mediterranean influences and excellent wine pairings.",
+        "cuisine_tags": [
+          "provencal",
+          "french",
+          "seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "950 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "650 reviews"
+          }
+        ],
+        "pros": [
+          "Romantic ambiance",
+          "Place des Vosges location",
+          "Excellent wine list"
+        ],
+        "cons": [
+          "Tourist-heavy",
+          "Can be pricey",
+          "Inconsistent execution"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Open daily",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Google Reviews, TripAdvisor, Omnivore, Eater Paris"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Rue Beautreillis, Marais",
+        "lat": 48.8595,
+        "lng": 2.3665,
+        "cuisine": "Modern French",
+        "budget_tier": "euro sign euro sign",
+        "highlight": "Casual offshoot of celebrated Frenchie",
+        "www": "Simple, quality-driven small plates and sandwiches from the team behind the acclaimed Frenchie restaurant. Fast-casual format with impeccable ingredients and inventive flavor combinations.",
+        "cuisine_tags": [
+          "modern-french",
+          "casual",
+          "inventive"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "880 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Top-tier ingredients",
+          "Quick service",
+          "Fair pricing for quality"
+        ],
+        "cons": [
+          "Limited seating",
+          "Can feel rushed",
+          "Popular so often full"
+        ],
+        "budget_reality": "15-28 euros par personne",
+        "day_note": "Closed Sundays and Mondays",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Le Fooding, Eater Paris, Reddit r/paris"
+      },
+      {
+        "name": "Merci",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Rue Beaumarchais, Marais",
+        "lat": 48.8605,
+        "lng": 2.3675,
+        "cuisine": "Contemporary French",
+        "budget_tier": "euro sign euro sign euro sign",
+        "highlight": "Elegant courtyard restaurant in design concept",
+        "why": "Part of a charming concept store combining retail, books, and fine dining in an airy courtyard setting. Modern French cuisine with attention to presentation and a carefully curated wine selection from small producers.",
+        "cuisine_tags": [
+          "contemporary-french",
+          "elegant",
+          "seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "1100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.3",
+            "count": "620 reviews"
+          }
+        ],
+        "pros": [
+          "Beautiful setting",
+          "Creative dishes",
+          "Unique concept venue"
+        ],
+        "cons": [
+          "Inconsistent quality",
+          "Pricey for execution",
+          "Service can be slow"
+        ],
+        "budget_reality": "40-60 euros par personne",
+        "day_note": "Open daily, closed Mondays",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Google Reviews, TripAdvisor, Eater Paris, Omnivore"
+      },
+      {
+        "name": "Septime La Gravelle",
+        "arrondissement": "4ème",
+        "arr_num": "4",
+        "neighbourhood": "Rue de la Bastille, Marais",
+        "lat": 48.852,
+        "lng": 2.371,
+        "cuisine": "Contemporary French",
+        "budget_tier": "euro sign euro sign euro sign euro sign",
+        "highlight": "Fine dining from acclaimed Septime team",
+        "why": "The elevated sibling to the legendary Septime, offering refined contemporary French cuisine in an intimate setting with natural wine focus. Precise, inventive cooking showcasing seasonal produce with artistic plating.",
+        "cuisine_tags": [
+          "contemporary-french",
+          "fine-dining",
+          "natural-wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "620 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Tres Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional cuisine",
+          "Outstanding natural wine list",
+          "Memorable experience"
+        ],
+        "cons": [
+          "Expensive",
+          "Difficult to book",
+          "Small space feels cramped"
+        ],
+        "budget_reality": "70-100 euros par personne",
+        "day_note": "Closed Sundays and Mondays, lunch by appointment only",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Google Reviews, Le Fooding, Omnivore, Eater Paris"
+      }
+    ],
+    "5": [
+      {
+        "name": "L'Avant Comptoir",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Latin Quarter",
+        "lat": 48.853,
+        "lng": 2.3444,
+        "cuisine": "French Tapas",
+        "budget_tier": "€€",
+        "highlight": "Standing room tapas, lively atmosphere",
+        "why": "Iconic standing-only bar from Chef Yves Camdeborde serving creative small plates and natural wines. High energy, social dining experience that defines modern Paris casual dining.",
+        "cuisine_tags": [
+          "tapas",
+          "natural wines",
+          "french"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "2100 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative small plates",
+          "Excellent natural wine list",
+          "Energetic social vibe",
+          "Fair prices for quality"
+        ],
+        "cons": [
+          "Always crowded",
+          "No seating at all",
+          "Difficult to reserve",
+          "Can be loud and chaotic"
+        ],
+        "budget_reality": "25-35 euros par personne",
+        "day_note": "Open daily, arrive early or expect 30+ minute waits",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Le Comptoir du Relais",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Saint-Germain-des-Pres",
+        "lat": 48.8535,
+        "lng": 2.34,
+        "cuisine": "French Classic",
+        "budget_tier": "€€€",
+        "highlight": "Camdeborde's flagship, refined comfort",
+        "why": "Sister restaurant to L'Avant Comptoir with full sit-down service, offering sophisticated French bistro cuisine in an elegant setting. Chef Camdeborde's refined take on traditional French comfort food.",
+        "cuisine_tags": [
+          "bistro",
+          "french",
+          "traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1800 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent chef pedigree",
+          "Beautiful dining room",
+          "Refined bistro cuisine",
+          "Good wine selection"
+        ],
+        "cons": [
+          "Reservation essential",
+          "Tourist-heavy",
+          "Can feel formal",
+          "Expensive for portion size"
+        ],
+        "budget_reality": "60-85 euros par personne",
+        "day_note": "Closed Sunday evening and Monday",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Mouffetard",
+        "lat": 48.8428,
+        "lng": 2.355,
+        "cuisine": "French Casual",
+        "budget_tier": "€€",
+        "highlight": "Sandwiches and small plates",
+        "why": "Casual offshoot of acclaimed Frenchie restaurant offering excellent quality at lower price point. Known for creative sandwiches, natural wines, and laid-back atmosphere in vibrant neighborhood.",
+        "cuisine_tags": [
+          "casual",
+          "sandwiches",
+          "natural wines"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "950 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "High quality ingredients",
+          "Good value",
+          "Counter seating friendly",
+          "Excellent wine list"
+        ],
+        "cons": [
+          "Limited seating",
+          "Can be crowded",
+          "No reservations",
+          "Inconsistent service"
+        ],
+        "budget_reality": "20-30 euros par personne",
+        "day_note": "Open daily except Sundays, lunch focus",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Les Papilles",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Odeon",
+        "lat": 48.8515,
+        "lng": 2.339,
+        "cuisine": "French Traditional",
+        "budget_tier": "€€",
+        "highlight": "Fixed menu, authentic bistro experience",
+        "why": "Beloved neighborhood institution with single fixed menu featuring classic French cuisine and wine. Wine shop by day, intimate bistro by night with genuine Parisian character.",
+        "cuisine_tags": [
+          "bistro",
+          "traditional",
+          "wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1200 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "500 avis"
+          }
+        ],
+        "pros": [
+          "Authentic atmosphere",
+          "Great value menu",
+          "Excellent wine pairings",
+          "Charming decor"
+        ],
+        "cons": [
+          "One set menu only",
+          "Crowded and touristy",
+          "Tight tables",
+          "Can feel rushed"
+        ],
+        "budget_reality": "35-50 euros par personne with wine",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Pollop",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Rue Mouffetard",
+        "lat": 48.8425,
+        "lng": 2.3555,
+        "cuisine": "Spanish Tapas",
+        "budget_tier": "€€",
+        "highlight": "Quality Spanish tapas, craft beers",
+        "why": "Modern Spanish tapas bar with carefully curated natural wines and craft beers. Vibrant atmosphere with authentic Spanish small plates and enthusiastic staff.",
+        "cuisine_tags": [
+          "spanish",
+          "tapas",
+          "natural wines"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "680 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Notable",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Quality ingredients",
+          "Good beer selection",
+          "Enthusiastic staff",
+          "Fun atmosphere"
+        ],
+        "cons": [
+          "Can be loud",
+          "Limited seating",
+          "Popular so crowded",
+          "Limited main dishes"
+        ],
+        "budget_reality": "30-40 euros par personne",
+        "day_note": "Closed Monday and Tuesday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Omnivore"
+      },
+      {
+        "name": "Itineraires",
+        "arrondissement": "5ème",
+        "arr_num": "5",
+        "neighbourhood": "Cardinal Lemoine",
+        "lat": 48.8475,
+        "lng": 2.352,
+        "cuisine": "French Modern",
+        "budget_tier": "€€€€",
+        "highlight": "Tasting menu, refined technique",
+        "why": "Fine dining restaurant with tasting menu format featuring seasonal French cuisine with Japanese influences. Intimate space with exceptional craftsmanship and presentation.",
+        "cuisine_tags": [
+          "fine dining",
+          "french",
+          "modern"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "520 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Coup de coeur",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional technique",
+          "Creative cuisine",
+          "Intimate atmosphere",
+          "Professional service"
+        ],
+        "cons": [
+          "Very expensive",
+          "Tasting menu only",
+          "Limited flexibility",
+          "Advance booking essential"
+        ],
+        "budget_reality": "90-120 euros par personne",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      }
+    ],
+    "6": [
+      {
+        "name": "Semaine",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Odeon",
+        "lat": 48.8517,
+        "lng": 2.3387,
+        "cuisine": "French Contemporary",
+        "budget_tier": "euro sign euro sign euro sign",
+        "highlight": "Refined bistro with seasonal market cuisine",
+        "why": "Semaine represents modern French dining at its best, focusing on impeccable ingredients and classical technique with contemporary sensibility. The wine list is thoughtfully curated and staff knowledge is exceptional.",
+        "cuisine_tags": [
+          "French",
+          "Seasonal",
+          "Market-driven"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "650 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional wine pairings",
+          "Attentive service",
+          "Beautiful plating and flavor combinations"
+        ],
+        "cons": [
+          "Can be noisy during peak hours",
+          "Reservation essential",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "60-85 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "L'Atlas",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Odeon",
+        "lat": 48.8506,
+        "lng": 2.3398,
+        "cuisine": "Moroccan",
+        "budget_tier": "euro sign euro sign",
+        "highlight": "Authentic Moroccan tagines and couscous",
+        "why": "L'Atlas delivers genuine Moroccan cuisine in an atmospheric setting with vibrant decor and warm hospitality. A locals favorite that maintains quality and authenticity without pretension.",
+        "cuisine_tags": [
+          "Moroccan",
+          "Tagine",
+          "Couscous"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "920 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "380 avis"
+          }
+        ],
+        "pros": [
+          "Generous portions",
+          "Charming bohemian atmosphere",
+          "Strong vegetarian selection"
+        ],
+        "cons": [
+          "Can feel touristy",
+          "Service sometimes slow during busy times",
+          "Limited wine list"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Dominique Crenn",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.8432,
+        "lng": 2.3289,
+        "cuisine": "French Haute Cuisine",
+        "budget_tier": "euro sign euro sign euro sign euro sign",
+        "highlight": "Three Michelin stars, avant-garde French",
+        "why": "Dominique Crenn's only Paris location offers innovative, artistic French cuisine that challenges and delights. The tasting menu is a choreographed experience combining technical mastery with poetic presentation.",
+        "cuisine_tags": [
+          "French",
+          "Michelin 3 Stars",
+          "Avant-garde"
+        ],
+        "scores": [
+          {
+            "source": "Michelin",
+            "score": "3 stars",
+            "count": ""
+          },
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "480 avis"
+          }
+        ],
+        "pros": [
+          "World-class technical execution",
+          "Unique artistic vision",
+          "Impeccable service"
+        ],
+        "cons": [
+          "Very expensive",
+          "Limited flexibility with menus",
+          "Booking required months ahead"
+        ],
+        "budget_reality": "190-250 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Google Reviews, Le Fooding"
+      },
+      {
+        "name": "Ze Kitchen Galerie",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Saint-Germain-des-Pres",
+        "lat": 48.855,
+        "lng": 2.3361,
+        "cuisine": "French-Asian Fusion",
+        "budget_tier": "euro sign euro sign euro sign",
+        "highlight": "Michelin-starred fusion cooking with open kitchen",
+        "why": "Ze Kitchen Galerie combines French technique with Asian influences in a minimalist space with theatrical open kitchen. The chef's creative energy is visible and engaging throughout the meal.",
+        "cuisine_tags": [
+          "Fusion",
+          "French-Asian",
+          "Michelin 1 Star"
+        ],
+        "scores": [
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          },
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "720 avis"
+          }
+        ],
+        "pros": [
+          "Creative cuisine",
+          "Open kitchen experience",
+          "Knowledgeable sommelier"
+        ],
+        "cons": [
+          "Can feel cramped",
+          "Prices high for portion sizes",
+          "Inconsistent execution"
+        ],
+        "budget_reality": "70-95 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Google Reviews, Omnivore"
+      },
+      {
+        "name": "Marche 20",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.8412,
+        "lng": 2.3256,
+        "cuisine": "French Bistro",
+        "budget_tier": "euro sign euro sign",
+        "highlight": "Classic bistro fare with reliable execution",
+        "why": "Marche 20 is an unpretentious neighborhood bistro serving traditional French dishes with consistency and care. Popular with locals for honest cooking and reasonable prices in Saint-Germain.",
+        "cuisine_tags": [
+          "Bistro",
+          "French Classic",
+          "Local favorite"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "640 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.2",
+            "count": "290 avis"
+          }
+        ],
+        "pros": [
+          "Excellent value for money",
+          "Friendly staff",
+          "Reliable classics"
+        ],
+        "cons": [
+          "Can be noisy",
+          "Limited ambiance",
+          "Inconsistent quality at peak times"
+        ],
+        "budget_reality": "28-45 euros par personne",
+        "day_note": "Ferme dimanche",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Ellsworth",
+        "arrondissement": "6ème",
+        "arr_num": "6",
+        "neighbourhood": "Saint-Germain-des-Pres",
+        "lat": 48.8545,
+        "lng": 2.3369,
+        "cuisine": "Modern American-French",
+        "budget_tier": "euro sign euro sign euro sign",
+        "highlight": "Contemporary cooking with generous portions",
+        "why": "Ellsworth brings a New York sensibility to Paris with refined American-French cuisine and excellent cocktails. The relaxed elegance and quality ingredients make it a favorite among Paris food lovers.",
+        "cuisine_tags": [
+          "American-French",
+          "Contemporary",
+          "Cocktails"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "810 avis"
+          },
+          {
+            "source": "Eater Paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent cocktail program",
+          "Welcoming atmosphere",
+          "Quality beef and seafood"
+        ],
+        "cons": [
+          "Can be expensive for casual dining",
+          "Noise level high",
+          "Reservations competitive"
+        ],
+        "budget_reality": "55-80 euros par personne",
+        "day_note": "Ferme lundi et mardi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Eater Paris, Google Reviews, Le Fooding"
+      }
+    ],
+    "7": [
+      {
+        "name": "Arpege",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "Invalides",
+        "lat": 48.8552,
+        "lng": 2.3045,
+        "cuisine": "French Modern",
+        "budget_tier": "eeee",
+        "highlight": "Three Michelin stars, vegetable focused",
+        "why": "Alain Passard's iconic restaurant showcases creative vegetable-forward cuisine in an elegant setting. Consistently ranked among world's best fine dining establishments.",
+        "cuisine_tags": [
+          "French",
+          "Fine Dining",
+          "Vegetables"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "2100 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "3 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Innovative vegetable preparations",
+          "Impeccable service",
+          "Memorable tasting menu experience"
+        ],
+        "cons": [
+          "Very expensive",
+          "Requires advance booking months ahead",
+          "Formal dress code"
+        ],
+        "budget_reality": "180-250 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Le Jules Verne",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "Eiffel Tower",
+        "lat": 48.8584,
+        "lng": 2.2945,
+        "cuisine": "French Contemporary",
+        "budget_tier": "eee",
+        "highlight": "Eiffel Tower location with Michelin stars",
+        "why": "Located inside the Eiffel Tower with panoramic views, this Michelin-starred restaurant offers refined French cuisine and an unforgettable dining setting. Quality execution despite tourist location.",
+        "cuisine_tags": [
+          "French",
+          "Fine Dining",
+          "Eiffel Tower Views"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "3500 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Spectacular views",
+          "Attentive service",
+          "Quality French cooking"
+        ],
+        "cons": [
+          "Tourist crowds",
+          "Pricey for tower location",
+          "Can feel touristy"
+        ],
+        "budget_reality": "95-150 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Michelin, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Septime la Cave",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "Saint-Dominique",
+        "lat": 48.8566,
+        "lng": 2.3125,
+        "cuisine": "French Bistro",
+        "budget_tier": "ee",
+        "highlight": "Natural wines with seasonal bistro fare",
+        "why": "Sister establishment of legendary Septime, focused on natural wines paired with rustic French cooking. Attracts wine enthusiasts and local diners seeking authentic bistro experience.",
+        "cuisine_tags": [
+          "Natural Wines",
+          "French Bistro",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "950 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding wine selection",
+          "Knowledgeable staff",
+          "Fair prices for quality"
+        ],
+        "cons": [
+          "Small space gets crowded",
+          "Reservation essential",
+          "Limited menu"
+        ],
+        "budget_reality": "45-70 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Omnivore, Google Reviews"
+      },
+      {
+        "name": "L'Astrance",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "Passy",
+        "lat": 48.8588,
+        "lng": 2.2912,
+        "cuisine": "French Haute Cuisine",
+        "budget_tier": "eee",
+        "highlight": "Two Michelin stars, minimalist approach",
+        "why": "Chef Christophe Royer's minimalist fine dining emphasizes pure flavors and technical precision. Consistently recognized as one of Paris's most innovative and refined restaurants.",
+        "cuisine_tags": [
+          "French",
+          "Fine Dining",
+          "Minimalist"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "1800 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "2 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Innovative cuisine",
+          "Exceptional service",
+          "Intimate atmosphere"
+        ],
+        "cons": [
+          "Very expensive",
+          "Hard to book",
+          "No written menu"
+        ],
+        "budget_reality": "120-180 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin, Le Fooding, Omnivore"
+      },
+      {
+        "name": "La Fontaine de Mars",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "School Military",
+        "lat": 48.8566,
+        "lng": 2.3055,
+        "cuisine": "French Bistro",
+        "budget_tier": "ee",
+        "highlight": "Classic bistro with charming terrace ambiance",
+        "why": "Beloved neighborhood bistro serving traditional French comfort food with an excellent wine list. The candlelit terrace is one of the most romantic spots in the 7th arrondissement.",
+        "cuisine_tags": [
+          "French Bistro",
+          "Traditional",
+          "Romantic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "2200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Beautiful terrace",
+          "Classic bistro dishes",
+          "Good wine selection"
+        ],
+        "cons": [
+          "Can be touristy at peak times",
+          "Service sometimes slow",
+          "No reservations policy"
+        ],
+        "budget_reality": "35-55 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, TripAdvisor"
+      },
+      {
+        "name": "Clover Green",
+        "arrondissement": "7ème",
+        "arr_num": "7",
+        "neighbourhood": "Champ de Mars",
+        "lat": 48.8574,
+        "lng": 2.2965,
+        "cuisine": "Vegetarian French",
+        "budget_tier": "eee",
+        "highlight": "High-end vegetarian with Michelin star",
+        "why": "Chef Jean-Francois Piege's sophisticated vegetarian restaurant proves meatless dining can be luxurious. Imaginative vegetable-focused tasting menu in refined atmosphere.",
+        "cuisine_tags": [
+          "Vegetarian",
+          "French",
+          "Fine Dining"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative vegetable dishes",
+          "Elegant presentation",
+          "Thoughtful service"
+        ],
+        "cons": [
+          "Vegetarian only limits options",
+          "Expensive for restaurant type",
+          "Small portions"
+        ],
+        "budget_reality": "85-130 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin, Le Fooding, Omnivore"
+      }
+    ],
+    "8": [
+      {
+        "name": "Epicure",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Champs-Elysees",
+        "lat": 48.8704,
+        "lng": 2.3077,
+        "cuisine": "French Haute Cuisine",
+        "budget_tier": "4",
+        "highlight": "Three Michelin stars excellence",
+        "why": "Epicure at Hotel Bristol represents the pinnacle of classical French gastronomy with impeccable service and a wine list spanning centuries. Chef Eric Frechon maintains rigorous standards that have earned three Michelin stars for decades.",
+        "cuisine_tags": [
+          "haute cuisine",
+          "french classics",
+          "wine-focused"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "450 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "3 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Flawless technical execution",
+          "Exceptional wine pairings",
+          "Historic elegant setting"
+        ],
+        "cons": [
+          "Very formal atmosphere",
+          "Limited seating requires advance booking",
+          "Expensive wine markups"
+        ],
+        "budget_reality": "200-280 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Taillevent",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Champs-Elysees",
+        "lat": 48.872,
+        "lng": 2.3092,
+        "cuisine": "French Gastronomique",
+        "budget_tier": "3",
+        "highlight": "Two Michelin stars and legendary wine cellar",
+        "why": "Taillevent combines refined French cuisine with one of Paris finest wine collections, offering a more relaxed elegance than its peers. The restaurant balances tradition with creative evolution under Chef Alain Soliveres.",
+        "cuisine_tags": [
+          "french gastronomique",
+          "wine selection",
+          "seasonal menu"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "380 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "2 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding wine list",
+          "Slightly less formal than three-star peers",
+          "Excellent cheese selection"
+        ],
+        "cons": [
+          "Still quite expensive",
+          "Jacket required",
+          "Limited spontaneous seating"
+        ],
+        "budget_reality": "120-160 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Omnivore"
+      },
+      {
+        "name": "L'Astrance",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Alma",
+        "lat": 48.8639,
+        "lng": 2.2959,
+        "cuisine": "Contemporary French",
+        "budget_tier": "3",
+        "highlight": "Two stars, creative precision modern French",
+        "why": "L'Astrance offers creative, finely-tuned cuisine that respects French tradition while pushing culinary boundaries under Chef Pascal Barbot. The intimate setting and focused tasting menu create memorable dining experiences.",
+        "cuisine_tags": [
+          "contemporary french",
+          "seasonal",
+          "tasting menu only"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "320 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "2 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative innovative cooking",
+          "Intimate comfortable atmosphere",
+          "Warm service"
+        ],
+        "cons": [
+          "Tasting menu only, no a la carte",
+          "Can feel cramped",
+          "Expensive for portion sizes"
+        ],
+        "budget_reality": "130-180 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Reddit r/paris"
+      },
+      {
+        "name": "Ladurée",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Champs-Elysees",
+        "lat": 48.8705,
+        "lng": 2.3073,
+        "cuisine": "French Bistro Chic",
+        "budget_tier": "2",
+        "highlight": "Historic salon de the and light cuisine",
+        "why": "Ladurée on the Champs-Elysees combines the luxury of the famous macarons with bistro-style cuisine in a Belle Epoque setting. It offers accessible French dining with iconic pastries and reliable quality.",
+        "cuisine_tags": [
+          "salon de the",
+          "french bistro",
+          "pastries"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "2100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "1200 avis"
+          }
+        ],
+        "pros": [
+          "Famous macarons and pastries",
+          "Beautiful historic setting",
+          "Reasonable prices for location"
+        ],
+        "cons": [
+          "Can be touristy and crowded",
+          "Inconsistent service quality",
+          "Seating cramped upstairs"
+        ],
+        "budget_reality": "35-55 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Le Fooding"
+      },
+      {
+        "name": "114 Faubourg",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Saint-Honore",
+        "lat": 48.8682,
+        "lng": 2.3151,
+        "cuisine": "French Contemporary",
+        "budget_tier": "2",
+        "highlight": "Hermes heritage restaurant with reliable excellence",
+        "why": "114 Faubourg combines the prestige of Hermes with accessible French cuisine in a refined but not stuffy atmosphere. The restaurant serves well-executed contemporary French with strong ingredient quality.",
+        "cuisine_tags": [
+          "contemporary french",
+          "lunch-friendly",
+          "design-focused"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "680 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Elegant design and atmosphere",
+          "Good value for quality",
+          "Consistently good cooking"
+        ],
+        "cons": [
+          "Can feel impersonal",
+          "Lunch rushed during business hours",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "50-75 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      },
+      {
+        "name": "Maison Prunier",
+        "arrondissement": "8ème",
+        "arr_num": "8",
+        "neighbourhood": "Alma",
+        "lat": 48.8639,
+        "lng": 2.2936,
+        "cuisine": "Seafood French",
+        "budget_tier": "2",
+        "highlight": "Classic oyster bar with legendary heritage",
+        "why": "Maison Prunier has served premium seafood since 1880 in a authentically Belle Epoque setting with marble counters and white tablecloths. The restaurant offers exceptional oysters and traditional fish preparations at reasonable prices.",
+        "cuisine_tags": [
+          "seafood",
+          "oysters",
+          "classic french"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "520 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent fresh oysters",
+          "Historic authentic atmosphere",
+          "Good value for quality"
+        ],
+        "cons": [
+          "Can be noisy and busy",
+          "Service sometimes slow",
+          "Limited non-seafood options"
+        ],
+        "budget_reality": "55-80 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      }
+    ],
+    "9": [
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Sentier",
+        "lat": 48.8653,
+        "lng": 2.3475,
+        "cuisine": "French Contemporary",
+        "budget_tier": "euro euro euro",
+        "highlight": "Chef Gregory Marchand casual bistro",
+        "why": "Excellent value from acclaimed Michelin-starred chef. Creative small plates and natural wines in relaxed atmosphere with consistent execution and warm service.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "2100 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding quality-to-price ratio",
+          "Knowledgeable wine staff",
+          "Dynamic menu with seasonal updates"
+        ],
+        "cons": [
+          "No reservations - long waits common",
+          "Small dining space gets loud",
+          "Limited seating"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Septime la Cave",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Grands Boulevards",
+        "lat": 48.8712,
+        "lng": 2.3428,
+        "cuisine": "French Wine Bar",
+        "budget_tier": "euro euro euro",
+        "highlight": "Septime team wine bar and small plates",
+        "why": "Sister concept to acclaimed Septime restaurant offering excellent natural wines paired with creative charcuterie and cheese boards. Exceptional value in sophisticated setting.",
+        "cuisine_tags": [
+          "Wine Bar",
+          "Charcuterie",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1850 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Curated natural wine list",
+          "Knowledgeable sommeliers",
+          "Quality charcuterie sourcing"
+        ],
+        "cons": [
+          "Can be crowded evenings",
+          "Pricey for portions",
+          "Limited food menu"
+        ],
+        "budget_reality": "40-60 euros par personne",
+        "day_note": "Ferme dimanche",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      },
+      {
+        "name": "Balagan",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Sentier",
+        "lat": 48.8645,
+        "lng": 2.3495,
+        "cuisine": "Israeli Mediterranean",
+        "budget_tier": "euro euro euro",
+        "highlight": "Vibrant Israeli street food concept",
+        "why": "Chef Oded Oren brings authentic Israeli flavors with bold spices and impeccable technique. Lively atmosphere with excellent cocktails and shared plates format creates memorable dining.",
+        "cuisine_tags": [
+          "Israeli",
+          "Mediterranean",
+          "Street Food"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "2250 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exciting bold flavors",
+          "Fun communal atmosphere",
+          "Creative cocktail program"
+        ],
+        "cons": [
+          "Noisy environment",
+          "Can feel rushed",
+          "Seating can be uncomfortable"
+        ],
+        "budget_reality": "45-65 euros par personne",
+        "day_note": "Ferme lundi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Bistrot Paul Bert",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Grands Boulevards",
+        "lat": 48.8705,
+        "lng": 2.3382,
+        "cuisine": "Traditional French Bistro",
+        "budget_tier": "euro euro euro",
+        "highlight": "Classic bistro cooking at fair prices",
+        "why": "No-frills traditional French bistro with excellent daily specials, reasonable wines, and portions that satisfy. Reliable neighborhood spot with authentic Parisian bistro experience.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1650 avis"
+          },
+          {
+            "source": "Falstaff",
+            "score": "Bon",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Very reasonable prices",
+          "Generous portions",
+          "Authentic bistro atmosphere"
+        ],
+        "cons": [
+          "Service can be gruff",
+          "Basic decor",
+          "Crowded at peak times"
+        ],
+        "budget_reality": "30-45 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, TripAdvisor"
+      },
+      {
+        "name": "Le Petit Trianon",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Pigalle",
+        "lat": 48.8827,
+        "lng": 2.336,
+        "cuisine": "Traditional French",
+        "budget_tier": "euro euro",
+        "highlight": "Historic neighborhood bistro near Pigalle",
+        "why": "Long-established spot with honest French cooking, fair pricing, and genuine Parisian neighborhood feel. Reliable for daily lunch and dinner without pretension.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Classic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "920 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "650 avis"
+          }
+        ],
+        "pros": [
+          "Excellent value",
+          "Local atmosphere",
+          "Consistent quality"
+        ],
+        "cons": [
+          "Limited wine selection",
+          "Simple decor",
+          "Can feel dated"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ferme dimanche",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Noir Blanc",
+        "arrondissement": "9ème",
+        "arr_num": "9",
+        "neighbourhood": "Sentier",
+        "lat": 48.8658,
+        "lng": 2.351,
+        "cuisine": "Modern French Fine Dining",
+        "budget_tier": "euro euro euro euro",
+        "highlight": "Contemporary fine dining with high technique",
+        "why": "Chef-driven restaurant with refined plating and sophisticated flavor combinations. Excellent wine list and attentive service create special occasion-worthy experience.",
+        "cuisine_tags": [
+          "French",
+          "Fine Dining",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "780 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "A Decouvrir",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Impeccable technique",
+          "Refined wine pairings",
+          "Elegant plating"
+        ],
+        "cons": [
+          "Expensive for portions",
+          "Can feel pretentious",
+          "Booking essential"
+        ],
+        "budget_reality": "70-100 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      }
+    ],
+    "10": [
+      {
+        "name": "Chez Prune",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Canal Saint-Martin",
+        "lat": 48.8699,
+        "lng": 2.3629,
+        "cuisine": "French Bistro",
+        "budget_tier": "€€",
+        "highlight": "Canal views, classic French cuisine",
+        "why": "Iconic canalside bistro with relaxed atmosphere and consistent quality. Popular with locals for weekend brunch and evening drinks with unbeatable waterfront setting.",
+        "cuisine_tags": [
+          "French Bistro",
+          "Canal Dining",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "2100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "1850 avis"
+          }
+        ],
+        "pros": [
+          "Terrace with canal views",
+          "Reliable bistro fare",
+          "Good wine selection",
+          "Lively weekend atmosphere"
+        ],
+        "cons": [
+          "Can be touristy in peak season",
+          "Service variable when busy",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Open daily",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Local knowledge"
+      },
+      {
+        "name": "Breizh Cafe",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Rue de Marseille",
+        "lat": 48.8725,
+        "lng": 2.3567,
+        "cuisine": "Breton Crepes",
+        "budget_tier": "€",
+        "highlight": "Authentic crepes, organic ingredients",
+        "why": "High-quality Breton creperie using organic flour and local ingredients from Brittany. Cult following among locals for both savory galettes and sweet crepes with impeccable technique.",
+        "cuisine_tags": [
+          "Breton",
+          "Crepes",
+          "Organic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "950 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent ingredient quality",
+          "Creative flavor combinations",
+          "Fair prices",
+          "Efficient service"
+        ],
+        "cons": [
+          "Small space gets crowded",
+          "Limited seating",
+          "Peak times have wait times"
+        ],
+        "budget_reality": "12-20 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Ten Belles",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Rue Marseille",
+        "lat": 48.8722,
+        "lng": 2.3571,
+        "cuisine": "Modern European",
+        "budget_tier": "€€€",
+        "highlight": "Seasonal menu, thoughtful cooking",
+        "why": "Intimate restaurant focused on ingredient-driven cooking with frequently changing seasonal menu. Strong reputation among food enthusiasts for precise technique and wine pairings.",
+        "cuisine_tags": [
+          "Modern European",
+          "Seasonal",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "380 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent wine list",
+          "Precise cooking",
+          "Intimate ambiance",
+          "Knowledgeable staff"
+        ],
+        "cons": [
+          "Reservation essential",
+          "Menu changes frequently",
+          "Can feel formal"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Ferme lundi et mardi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Omnivore, Google Reviews"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Rue de Marseille",
+        "lat": 48.8728,
+        "lng": 2.3563,
+        "cuisine": "French Street Food",
+        "budget_tier": "€",
+        "highlight": "Casual sandwiches, quality ingredients",
+        "why": "Casual counter-service sister to acclaimed Frenchie restaurant offering excellent sandwiches and simple plates using high-quality ingredients. Perfect for quick lunch in the neighborhood.",
+        "cuisine_tags": [
+          "Sandwiches",
+          "Casual",
+          "French"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1200 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.1",
+            "count": "650 avis"
+          }
+        ],
+        "pros": [
+          "Excellent value",
+          "High ingredient quality",
+          "Fast service",
+          "Good for quick lunch"
+        ],
+        "cons": [
+          "Very limited seating",
+          "Gets crowded",
+          "No reservations"
+        ],
+        "budget_reality": "15-25 euros par personne",
+        "day_note": "Open daily",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Local knowledge"
+      },
+      {
+        "name": "Le Comptoir General",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Quai de Jemmapes",
+        "lat": 48.8738,
+        "lng": 2.3618,
+        "cuisine": "French Comfort Food",
+        "budget_tier": "€€",
+        "highlight": "Classic bistro, warm atmosphere",
+        "why": "Traditional French bistro serving well-executed comfort food in a genuinely welcoming environment. Known for reliable classics and honest approach to cooking rather than pretension.",
+        "cuisine_tags": [
+          "Comfort Food",
+          "Bistro",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "1100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "800 avis"
+          }
+        ],
+        "pros": [
+          "Friendly staff",
+          "Consistent quality",
+          "Reasonable prices",
+          "Terrace on canal"
+        ],
+        "cons": [
+          "Can be noisy",
+          "Variable during peak hours",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "30-45 euros par personne",
+        "day_note": "Ferme mardi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Local knowledge"
+      },
+      {
+        "name": "Adresse",
+        "arrondissement": "10ème",
+        "arr_num": "10",
+        "neighbourhood": "Belleville",
+        "lat": 48.8682,
+        "lng": 2.3745,
+        "cuisine": "Modern French",
+        "budget_tier": "€€€",
+        "highlight": "Refined cooking, excellent execution",
+        "why": "Contemporary French cooking with strong technique and elegant presentations. Respected among food critics for maintaining high standards while staying true to French culinary traditions.",
+        "cuisine_tags": [
+          "Modern French",
+          "Refined",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "420 avis"
+          },
+          {
+            "source": "Falstaff",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent technique",
+          "Welcoming staff",
+          "Well-curated wine list",
+          "Consistent execution"
+        ],
+        "cons": [
+          "Reservation required",
+          "Can feel formal",
+          "Limited walk-in availability"
+        ],
+        "budget_reality": "50-70 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Falstaff, Google Reviews, Omnivore"
+      }
+    ],
+    "11": [
+      {
+        "name": "Septime",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Oberkampf",
+        "lat": 48.865,
+        "lng": 2.371,
+        "cuisine": "French Contemporary",
+        "budget_tier": "€€€",
+        "highlight": "Inventive seasonal French cuisine",
+        "why": "One of Paris's most acclaimed restaurants with a constantly evolving menu based on market availability. Chef Bertrand Grébaut sources impeccable ingredients and presents them with creative, refined technique that has earned consistent recognition from major guides.",
+        "cuisine_tags": [
+          "French",
+          "Seasonal",
+          "Market-driven"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional ingredient quality",
+          "Creative seasonal menu",
+          "Knowledgeable staff",
+          "Wine list depth"
+        ],
+        "cons": [
+          "Difficult reservations",
+          "Premium pricing",
+          "Small dining space",
+          "No walk-ins accepted"
+        ],
+        "budget_reality": "70-95 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Michelin Guide, Google Reviews"
+      },
+      {
+        "name": "Candelaria",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Oberkampf",
+        "lat": 48.8659,
+        "lng": 2.3696,
+        "cuisine": "Mexican",
+        "budget_tier": "€€",
+        "highlight": "Authentic street tacos and cocktails",
+        "why": "This casual taqueria-cocktail bar hybrid has become a neighborhood institution for its genuine Mexican flavors and creative drinks. The space bridges two storefronts with a lively, unpretentious atmosphere that appeals to both locals and visitors seeking quality casual dining.",
+        "cuisine_tags": [
+          "Mexican",
+          "Tacos",
+          "Cocktails"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "2100 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Coup de coeur",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent tacos",
+          "Creative cocktails",
+          "Friendly atmosphere",
+          "Good value",
+          "Walk-in friendly"
+        ],
+        "cons": [
+          "Very crowded evenings",
+          "Can be loud",
+          "Limited seating",
+          "Inconsistent service during rush"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ouvert 7 jours sur 7",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Le Baratin",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Belleville",
+        "lat": 48.872,
+        "lng": 2.385,
+        "cuisine": "French Bistro",
+        "budget_tier": "€€",
+        "highlight": "Classic bistro with market-driven menu",
+        "why": "A beloved neighborhood bistro where chef Raquel Carena sources daily from local producers to create simple, honest French cuisine. The intimate space and personal service create an authentic Parisian dining experience without pretension or high costs.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Market-fresh"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "650 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          },
+          {
+            "source": "Michelin",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Authentic bistro experience",
+          "Daily changing menu",
+          "Fair pricing for quality",
+          "Warm hospitality",
+          "Excellent wine selection"
+        ],
+        "cons": [
+          "Small space gets cramped",
+          "Reservations essential",
+          "Limited menu choices",
+          "Can be slow service"
+        ],
+        "budget_reality": "40-55 euros par personne",
+        "day_note": "Ferme samedi et dimanche",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Broken Arm",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Oberkampf",
+        "lat": 48.8641,
+        "lng": 2.3677,
+        "cuisine": "International Casual",
+        "budget_tier": "€€",
+        "highlight": "Trendy brunch spot and casual dining",
+        "why": "This design-forward restaurant combines a fashion boutique with dining, offering elevated casual food and excellent coffee in a vibrant, Instagram-worthy setting. The menu rotates seasonally with global influences and appeals to a younger, creative crowd seeking quality without formality.",
+        "cuisine_tags": [
+          "International",
+          "Brunch",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1800 avis"
+          },
+          {
+            "source": "Eater Paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent brunch",
+          "Great coffee",
+          "Beautiful space",
+          "Instagram-worthy decor",
+          "Young, energetic vibe"
+        ],
+        "cons": [
+          "Can be pretentious",
+          "Crowded weekends",
+          "Inconsistent kitchen quality",
+          "Slow service during peak times"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ouvert 7 jours sur 7",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Eater Paris, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Menilmontant",
+        "lat": 48.8705,
+        "lng": 2.3897,
+        "cuisine": "French Casual",
+        "budget_tier": "€",
+        "highlight": "Casual offshoot of celebrated fine dining",
+        "why": "This casual takeout and counter-dining concept from Frenchie restaurant group delivers quality French-inspired food at accessible prices. Perfect for those seeking good ingredients and careful preparation without the formality, cost, or reservation hassle of fine dining.",
+        "cuisine_tags": [
+          "French",
+          "Casual",
+          "Counter-service"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "980 avis"
+          },
+          {
+            "source": "Eater Paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent value",
+          "Quality ingredients",
+          "Quick service",
+          "Casual vibe",
+          "No reservations needed"
+        ],
+        "cons": [
+          "Very limited seating",
+          "Can have long queues",
+          "Limited menu",
+          "No table service"
+        ],
+        "budget_reality": "20-30 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Eater Paris, Google Reviews"
+      },
+      {
+        "name": "Chez Prune",
+        "arrondissement": "11ème",
+        "arr_num": "11",
+        "neighbourhood": "Parmentier",
+        "lat": 48.8692,
+        "lng": 2.3785,
+        "cuisine": "French Bistro",
+        "budget_tier": "€€",
+        "highlight": "Canal-side views with solid bistro fare",
+        "why": "This waterside bistro offers classic French cooking with the bonus of Canal Saint-Martin views, making it ideal for leisurely meals and people-watching. The combination of reliable, unpretentious cuisine with an appealing setting has maintained its reputation as a neighborhood favorite for years.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "1400 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Beautiful canal setting",
+          "Terrace seating",
+          "Reliable food",
+          "Good for groups",
+          "Casual atmosphere",
+          "Welcoming staff"
+        ],
+        "cons": [
+          "Tourist-heavy at times",
+          "Can be inconsistent quality",
+          "Slightly dated decor",
+          "Service variable on busy days"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ouvert 7 jours sur 7",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "TripAdvisor, Google Reviews, Reddit r/paris"
+      }
+    ],
+    "12": [
+      {
+        "name": "Le Baratin",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Bercy",
+        "lat": 48.8395,
+        "lng": 2.3847,
+        "cuisine": "French Bistro",
+        "budget_tier": "€€€",
+        "highlight": "Michelin-starred neighborhood gem",
+        "why": "This intimate bistro holds a Michelin star for its creative, seasonal French cuisine executed with precision. Chef Raoul Reichrath sources exceptional ingredients and delivers refined plates in a warm, unpretentious setting that feels like a secret among locals.",
+        "cuisine_tags": [
+          "French",
+          "Seasonal",
+          "Contemporary Bistro"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "650 reviews"
+          },
+          {
+            "source": "Michelin Guide",
+            "score": "1 star",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent wine selection",
+          "Knowledgeable and attentive service",
+          "Beautifully plated dishes with bold flavors"
+        ],
+        "cons": [
+          "Very small space means limited seating",
+          "Requires advance reservation weeks ahead",
+          "Prix fixe only format"
+        ],
+        "budget_reality": "70-95 euros per person",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Google Reviews, Le Fooding"
+      },
+      {
+        "name": "O Quai du 12",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Quai de la Rapee",
+        "lat": 48.8405,
+        "lng": 2.3788,
+        "cuisine": "Seafood Bistro",
+        "budget_tier": "€€€",
+        "highlight": "Riverside seafood with impeccable freshness",
+        "why": "Overlooking the Seine, this restaurant specializes in pristine seafood prepared simply to showcase quality ingredients. The daily fish selection is excellent and the kitchen respects the purity of each product with refined preparation.",
+        "cuisine_tags": [
+          "Seafood",
+          "French",
+          "Fine Dining"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "520 reviews"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Stunning Seine views",
+          "Impeccable seafood quality",
+          "Professional service",
+          "Beautiful plating"
+        ],
+        "cons": [
+          "Can feel formal and stiff",
+          "Wine markup is substantial",
+          "Oyster prices on higher side"
+        ],
+        "budget_reality": "65-90 euros per person",
+        "day_note": "Closed Monday and Tuesday",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Omnivore, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "Septime la Grave",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Reuilly",
+        "lat": 48.8415,
+        "lng": 2.4005,
+        "cuisine": "Modern French",
+        "budget_tier": "€€",
+        "highlight": "Excellent natural wines and creative small plates",
+        "why": "Sister to the acclaimed Septime in the 11th, this wine bar offers creative cooking paired with an exceptional natural wine list. The relaxed atmosphere and focus on ingredient-driven dishes without pretension make it a local favorite.",
+        "cuisine_tags": [
+          "Natural Wine",
+          "Small Plates",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "890 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding natural wine selection",
+          "Friendly and knowledgeable staff",
+          "Creative small dishes",
+          "Good value for quality"
+        ],
+        "cons": [
+          "Can be loud and crowded",
+          "Limited table space",
+          "No reservations policy means wait times"
+        ],
+        "budget_reality": "35-50 euros per person plus wine",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Fleur de Pavé",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Bercy",
+        "lat": 48.8365,
+        "lng": 2.3892,
+        "cuisine": "French Comfort Food",
+        "budget_tier": "€€",
+        "highlight": "Satisfying bistro classics with neighborhood warmth",
+        "why": "This cozy neighborhood bistro executes traditional French dishes with care and consistency. The menu features well-executed classics like blanquette de veau and sole meunière in a relaxed, welcoming environment perfect for uncomplicated dining.",
+        "cuisine_tags": [
+          "Bistro",
+          "French Classics",
+          "Comfort Food"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "620 reviews"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "245 reviews"
+          }
+        ],
+        "pros": [
+          "Authentic bistro atmosphere",
+          "Reasonable prices",
+          "Generous portions",
+          "Friendly service"
+        ],
+        "cons": [
+          "Can feel dated in decor",
+          "Service can be slow during peak hours",
+          "Limited menu creativity"
+        ],
+        "budget_reality": "28-45 euros per person",
+        "day_note": "Closed Tuesday evening and Wednesday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Les Vivandes",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Daumesnil",
+        "lat": 48.8345,
+        "lng": 2.3945,
+        "cuisine": "Charcuterie and Wine",
+        "budget_tier": "€",
+        "highlight": "Excellent cured meats and natural wines",
+        "why": "A excellent charcuterie shop with attached wine bar serving carefully curated cured meats and cheeses. The quality of the products sourced is remarkable and represents excellent value for the quality offered.",
+        "cuisine_tags": [
+          "Charcuterie",
+          "Wine Bar",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "420 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding quality charcuterie",
+          "Excellent wine selection at fair prices",
+          "Casual and unpretentious",
+          "Great for lunch"
+        ],
+        "cons": [
+          "Very small space limits seating",
+          "Can be crowded during lunch rush",
+          "Limited hot dishes"
+        ],
+        "budget_reality": "18-32 euros per person",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Eater Paris"
+      },
+      {
+        "name": "La Cour aux Étoiles",
+        "arrondissement": "12ème",
+        "arr_num": "12",
+        "neighbourhood": "Gare de Lyon",
+        "lat": 48.8475,
+        "lng": 2.3758,
+        "cuisine": "Contemporary French",
+        "budget_tier": "€€€",
+        "highlight": "Elegant plating and refined technique",
+        "why": "This refined restaurant offers contemporary French cuisine with excellent technical execution and thoughtful flavor combinations. The dining room is elegant without being stuffy, and the kitchen demonstrates consistent skill and creativity.",
+        "cuisine_tags": [
+          "Contemporary French",
+          "Fine Dining",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "540 reviews"
+          },
+          {
+            "source": "Michelin Guide",
+            "score": "Bib Gourmand candidate",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent technical execution",
+          "Beautiful presentation",
+          "Good wine list",
+          "Attentive service"
+        ],
+        "cons": [
+          "Can feel formal and corporate",
+          "Prices justified but not bargain",
+          "Heavy on cream-based sauces"
+        ],
+        "budget_reality": "55-80 euros per person",
+        "day_note": "Closed Saturday lunch and Sunday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Google Reviews, Eater Paris"
+      }
+    ],
+    "13": [
+      {
+        "name": "Sukiyaki",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Butte aux Cailles",
+        "lat": 48.8302,
+        "lng": 2.3491,
+        "cuisine": "Japanese",
+        "budget_tier": "€€",
+        "highlight": "Authentic sukiyaki and hot pot",
+        "why": "Long-standing Japanese specialist with genuine Tokyo-style preparation and quality beef cuts. A neighborhood institution beloved by locals and Japanese expats alike.",
+        "cuisine_tags": [
+          "Japanese",
+          "Hot Pot",
+          "Sukiyaki"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "620 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "280 reviews"
+          }
+        ],
+        "pros": [
+          "Excellent quality beef",
+          "Authentic preparation",
+          "Warm intimate atmosphere",
+          "Attentive service"
+        ],
+        "cons": [
+          "Small space gets crowded",
+          "Can feel touristy during peak hours",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ferme lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Les Cailloux",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Butte aux Cailles",
+        "lat": 48.8298,
+        "lng": 2.3512,
+        "cuisine": "French Bistro",
+        "budget_tier": "€€€",
+        "highlight": "Classic French comfort food done right",
+        "why": "Charming neighborhood bistro with strong execution of traditional dishes and an excellent wine list. Popular for its reliable quality and convivial atmosphere among 13eme regulars.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "510 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Vivement recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Consistent quality",
+          "Good wine selection",
+          "Friendly service",
+          "Reasonable prices for quality"
+        ],
+        "cons": [
+          "Reservations essential on weekends",
+          "Can be noisy",
+          "Small portions for some dishes"
+        ],
+        "budget_reality": "40-55 euros par personne",
+        "day_note": "Ferme dimanche soir et lundi",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Google Reviews, Omnivore, Reddit r/paris"
+      },
+      {
+        "name": "Chez Nicos",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Gobelins",
+        "lat": 48.8365,
+        "lng": 2.3548,
+        "cuisine": "Greek",
+        "budget_tier": "€",
+        "highlight": "Unpretentious Greek taverna since 1985",
+        "why": "Historic neighborhood favorite serving honest Greek food in a no-frills setting. Diner reviews consistently praise the freshness of ingredients and family-run authenticity.",
+        "cuisine_tags": [
+          "Greek",
+          "Mediterranean",
+          "Taverna"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "420 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.3",
+            "count": "190 reviews"
+          }
+        ],
+        "pros": [
+          "Very affordable",
+          "Authentic flavor",
+          "Warm family atmosphere",
+          "Generous portions"
+        ],
+        "cons": [
+          "Dated decor",
+          "Can be slow service on busy nights",
+          "Cash preferred"
+        ],
+        "budget_reality": "18-28 euros par personne",
+        "day_note": "Ferme lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Au Petit Pontoise",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Butte aux Cailles",
+        "lat": 48.8305,
+        "lng": 2.3495,
+        "cuisine": "French Modern",
+        "budget_tier": "€€€€",
+        "highlight": "Contemporary bistro with seasonal menus",
+        "why": "Refined neighborhood spot featuring market-driven French cuisine with thoughtful preparations. Well-regarded by Omnivore and Google reviewers for quality ingredients and skilled execution.",
+        "cuisine_tags": [
+          "French",
+          "Modern Bistro",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "340 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "A Decourir",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative seasonal menu",
+          "Excellent sourcing",
+          "Knowledgeable staff",
+          "Good wine pairings"
+        ],
+        "cons": [
+          "Pricey for the portions",
+          "Can be pretentious",
+          "Reservation mandatory"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Ferme lundi et mardi midi",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Google Reviews, Le Fooding, Omnivore"
+      },
+      {
+        "name": "Pho 13",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Chinatown",
+        "lat": 48.8245,
+        "lng": 2.3623,
+        "cuisine": "Vietnamese",
+        "budget_tier": "€",
+        "highlight": "Authentic Vietnamese pho and banh mi",
+        "why": "Simple Vietnamese spot in the heart of the 13eme Chinatown district with genuine recipes and quick service. Local favorites for its fragrant broths and excellent value.",
+        "cuisine_tags": [
+          "Vietnamese",
+          "Pho",
+          "Asian Fusion"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "680 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "310 reviews"
+          }
+        ],
+        "pros": [
+          "Very affordable",
+          "Authentic recipes",
+          "Fresh ingredients",
+          "Quick service"
+        ],
+        "cons": [
+          "Minimalist decor",
+          "Can be crowded at lunch",
+          "Limited vegetarian choice"
+        ],
+        "budget_reality": "12-22 euros par personne",
+        "day_note": "Ouvert 7 jours sur 7",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "La Tomate Verte",
+        "arrondissement": "13ème",
+        "arr_num": "13",
+        "neighbourhood": "Gare d'Austerlitz",
+        "lat": 48.8412,
+        "lng": 2.3695,
+        "cuisine": "French Vegetarian",
+        "budget_tier": "€€",
+        "highlight": "Market-focused vegetarian French cuisine",
+        "why": "Dedicated vegetarian restaurant with serious culinary approach to seasonal vegetables and legumes. Google and Reddit r/paris praise its creative preparations and reasonable pricing.",
+        "cuisine_tags": [
+          "Vegetarian",
+          "French",
+          "Market-driven"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "390 avis"
+          },
+          {
+            "source": "HappyCow",
+            "score": "4.6",
+            "count": "220 reviews"
+          }
+        ],
+        "pros": [
+          "Creative vegetable dishes",
+          "Locally sourced",
+          "Good value",
+          "Welcoming service"
+        ],
+        "cons": [
+          "Limited seating",
+          "No meat option",
+          "Can feel cramped",
+          "Reservation helpful"
+        ],
+        "budget_reality": "32-48 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, HappyCow"
+      }
+    ],
+    "14": [
+      {
+        "name": "Semolina",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.838,
+        "lng": 2.3285,
+        "cuisine": "Italian",
+        "budget_tier": "euro euro euro",
+        "highlight": "Handmade pasta, natural wines",
+        "why": "Semolina offers authentic Roman-style cuisine with exceptional housemade pastas and an expertly curated natural wine list. The intimate dining room and passionate ownership have made it a favorite among Paris food critics.",
+        "cuisine_tags": [
+          "pasta",
+          "italian",
+          "natural-wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "520 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Impeccable handmade pasta",
+          "Excellent natural wine selection",
+          "Warm, knowledgeable service"
+        ],
+        "cons": [
+          "Very small space, hard to book",
+          "Limited menu rotation",
+          "Can feel cramped when full"
+        ],
+        "budget_reality": "50-70 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Contre-Allée",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.8375,
+        "lng": 2.331,
+        "cuisine": "Contemporary French",
+        "budget_tier": "euro euro euro euro",
+        "highlight": "Michelin-starred fine dining",
+        "why": "Contre-Allee represents refined French gastronomy with seasonal menus that showcase classical technique and modern creativity. Its consistent recognition from Michelin and Le Fooding reflects its position as one of Paris's finest restaurants.",
+        "cuisine_tags": [
+          "gastronomique",
+          "french",
+          "seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "680 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Sophisticated, well-executed dishes",
+          "Impeccable wine pairings",
+          "Attentive fine dining service"
+        ],
+        "cons": [
+          "Expensive for casual dining",
+          "Formal atmosphere not for everyone",
+          "Limited seating, advance booking essential"
+        ],
+        "budget_reality": "90-140 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "L'Assiette",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.8365,
+        "lng": 2.3295,
+        "cuisine": "Bistro Francais",
+        "budget_tier": "euro euro",
+        "highlight": "Classic Parisian bistro, reasonable prices",
+        "why": "L'Assiette is a historic bistro institution serving unpretentious French comfort food in an authentically Parisian setting. Its loyal clientele appreciates the consistent quality and warm, unpretentious atmosphere.",
+        "cuisine_tags": [
+          "bistro",
+          "french",
+          "classic"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "920 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Great value for money",
+          "Authentic bistro atmosphere",
+          "Reliable, well-prepared classics"
+        ],
+        "cons": [
+          "Can be touristy during peak hours",
+          "Occasionally slow service when busy",
+          "Noise level can be high"
+        ],
+        "budget_reality": "28-45 euros par personne",
+        "day_note": "Ferme dimanche soir",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Frederic Simonin",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Mouton-Duvernet",
+        "lat": 48.829,
+        "lng": 2.332,
+        "cuisine": "Contemporary Seafood",
+        "budget_tier": "euro euro euro euro",
+        "highlight": "Seafood specialist, Michelin-starred",
+        "why": "Frederic Simonin focuses exclusively on impeccably sourced seafood preparations with technical mastery and artistic presentation. The restaurant's single-minded dedication to seafood excellence has earned sustained critical recognition.",
+        "cuisine_tags": [
+          "seafood",
+          "gastronomique",
+          "contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "450 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional seafood sourcing",
+          "Technically impressive preparations",
+          "Elegant plating and presentation"
+        ],
+        "cons": [
+          "Very expensive",
+          "Can feel intimidating for casual diners",
+          "Limited menu variety if not fish lover"
+        ],
+        "budget_reality": "100-160 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "La Grande Maison",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Montparnasse",
+        "lat": 48.8378,
+        "lng": 2.3265,
+        "cuisine": "Brasserie Francaise",
+        "budget_tier": "euro euro euro",
+        "highlight": "Classic brasserie, oysters, seafood",
+        "why": "La Grande Maison combines elegant brasserie dining with exceptional oysters and seafood selections in a luminous, Art Deco-inspired space. Its consistently high standards and convivial atmosphere make it popular with both locals and visitors.",
+        "cuisine_tags": [
+          "brasserie",
+          "seafood",
+          "oysters"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1100 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Fresh oyster selections",
+          "Elegant brasserie ambiance",
+          "Reliable execution across menu"
+        ],
+        "cons": [
+          "Can be crowded at peak times",
+          "Premium pricing for seafood",
+          "Service quality varies by staff"
+        ],
+        "budget_reality": "55-85 euros par personne",
+        "day_note": "Ouvert sept jours sur sept",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, TripAdvisor"
+      },
+      {
+        "name": "Crep'Heure",
+        "arrondissement": "14ème",
+        "arr_num": "14",
+        "neighbourhood": "Breton",
+        "lat": 48.834,
+        "lng": 2.3275,
+        "cuisine": "Breton Crepes",
+        "budget_tier": "euro",
+        "highlight": "Authentic Breton galettes, casual",
+        "why": "Crep'Heure offers genuine Breton crepes and galettes made with quality ingredients in a casual, friendly setting. Its no-nonsense approach to traditional regional cuisine appeals to budget-conscious diners seeking authentic value.",
+        "cuisine_tags": [
+          "breton",
+          "crepes",
+          "casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "680 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "320 avis"
+          }
+        ],
+        "pros": [
+          "Excellent value for money",
+          "Authentic Breton preparation",
+          "Quick, efficient service"
+        ],
+        "cons": [
+          "Very casual, minimal decor",
+          "Can be crowded at lunch",
+          "Limited drink selection"
+        ],
+        "budget_reality": "12-20 euros par personne",
+        "day_note": "Ferme lundi et mardi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      }
+    ],
+    "15": [
+      {
+        "name": "Semaine",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Beaugrenelle",
+        "lat": 48.8509,
+        "lng": 2.2895,
+        "cuisine": "Contemporary French",
+        "budget_tier": "€€€",
+        "highlight": "Market-driven seasonal cuisine daily",
+        "why": "Chef changes menu based on daily market finds, creating genuine farm-to-table dining with precision technique. Strong reputation among Le Fooding circles for creative, restrained cooking that respects ingredients.",
+        "cuisine_tags": [
+          "French",
+          "Seasonal",
+          "Market-driven"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "520 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Oui",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Intelligent seasonal menus",
+          "Attentive service without stuffiness",
+          "Excellent natural wine selection"
+        ],
+        "cons": [
+          "Limited seating, book ahead",
+          "Can feel minimalist to some",
+          "No lunch service weekdays"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, r/paris recommendations"
+      },
+      {
+        "name": "Comme a la Maison",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Montparnasse-Bienvenue",
+        "lat": 48.8421,
+        "lng": 2.3289,
+        "cuisine": "Bistro French",
+        "budget_tier": "€€",
+        "highlight": "Classic bistro fare, neighborhood institution",
+        "why": "Authentic Parisian bistro with traditional recipes executed well, beloved by locals for honest cooking and genuine atmosphere. Consistent quality over many years makes it a reliable neighborhood standby.",
+        "cuisine_tags": [
+          "Bistro",
+          "French",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "680 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "350 reviews"
+          }
+        ],
+        "pros": [
+          "Warm neighborhood vibe",
+          "Reliable classic dishes",
+          "Good value for Paris"
+        ],
+        "cons": [
+          "Can be noisy during peak hours",
+          "Service sometimes slow when busy",
+          "Limited creativity in menu"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Open Tuesday to Sunday",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, r/paris regulars"
+      },
+      {
+        "name": "Tomy and the Milk",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Lecourbe",
+        "lat": 48.8448,
+        "lng": 2.2987,
+        "cuisine": "Seafood Contemporary",
+        "budget_tier": "€€€",
+        "highlight": "Oysters and raw preparations focus",
+        "why": "Minimalist seafood concept with exceptional product quality, focusing on oysters, crustaceans and raw preparations in a refined setting. Strong technical execution and impeccable sourcing earn consistent praise from food critics.",
+        "cuisine_tags": [
+          "Seafood",
+          "Raw preparations",
+          "Oysters"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "420 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Oui",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding oyster selection",
+          "Precise technical skills",
+          "Elegant minimalist setting"
+        ],
+        "cons": [
+          "High prices for portion size",
+          "Can feel austere",
+          "Seafood-only limited for some palates"
+        ],
+        "budget_reality": "60-85 euros par personne",
+        "day_note": "Closed Monday and Tuesday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore, food critics"
+      },
+      {
+        "name": "Auguste",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Dupleix",
+        "lat": 48.8578,
+        "lng": 2.2892,
+        "cuisine": "Casual French",
+        "budget_tier": "€",
+        "highlight": "Simple, unpretentious neighborhood eating",
+        "why": "No-frills neighborhood restaurant with solid basic French cooking at modest prices. Regular locals appreciate the straightforward menu, fresh ingredients and honest portions without artifice.",
+        "cuisine_tags": [
+          "French",
+          "Casual",
+          "Neighborhood"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "510 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "280 reviews"
+          }
+        ],
+        "pros": [
+          "Very affordable",
+          "Generous portions",
+          "Friendly local crowd"
+        ],
+        "cons": [
+          "Dated decor",
+          "Service can be gruff",
+          "Limited menu options"
+        ],
+        "budget_reality": "22-35 euros par personne",
+        "day_note": "Open lunch and dinner most days",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, r/paris locals"
+      },
+      {
+        "name": "COTE",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Beaugrenelle",
+        "lat": 48.8515,
+        "lng": 2.287,
+        "cuisine": "Meat focused Modern",
+        "budget_tier": "€€€",
+        "highlight": "Premium cuts, expert preparation",
+        "why": "Contemporary restaurant emphasizing quality meat sourcing and precise cooking techniques with refined sides and wine pairings. Appeals to diners seeking elevated comfort food with technical mastery.",
+        "cuisine_tags": [
+          "Meat",
+          "French",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "380 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Oui",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent meat quality",
+          "Professional service",
+          "Good wine list"
+        ],
+        "cons": [
+          "Pricey for portions",
+          "Can feel formal",
+          "Limited vegetable focus"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Closed Sunday evening",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, food critics"
+      },
+      {
+        "name": "L'Entente",
+        "arrondissement": "15ème",
+        "arr_num": "15",
+        "neighbourhood": "Commerce",
+        "lat": 48.8401,
+        "lng": 2.2978,
+        "cuisine": "Regional French",
+        "budget_tier": "€€",
+        "highlight": "Traditional recipes from French regions",
+        "why": "Restaurant celebrating regional French cooking with rotating seasonal specials drawing from different areas. Regular clientele appreciates the genuine approach to terroir-based cooking and knowledgeable staff.",
+        "cuisine_tags": [
+          "Regional",
+          "French",
+          "Traditional"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "470 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "310 reviews"
+          }
+        ],
+        "pros": [
+          "Authentic regional recipes",
+          "Helpful knowledgeable staff",
+          "Fair pricing"
+        ],
+        "cons": [
+          "Can be quiet off-season",
+          "Menu changes limit consistency",
+          "Sometimes heavy dishes"
+        ],
+        "budget_reality": "40-55 euros par personne",
+        "day_note": "Closed Monday",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, r/paris recommendations"
+      }
+    ],
+    "16": [
+      {
+        "name": "Joël Robuchon",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "Passy",
+        "lat": 48.861,
+        "lng": 2.2879,
+        "cuisine": "French Gastronomique",
+        "budget_tier": "euros euros euros euros",
+        "highlight": "Michelin 3-star haute cuisine",
+        "why": "One of Paris finest gastronomic temples with impeccable technique and refined flavors. Robuchon's legacy of perfection in every detail remains unmatched in the arrondissement.",
+        "cuisine_tags": [
+          "French",
+          "Gastronomique",
+          "Classique"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "650 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "3 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional service and attention to detail",
+          "Impeccable ingredient quality",
+          "Wine list is world-class"
+        ],
+        "cons": [
+          "Extremely expensive",
+          "Formal atmosphere not for casual dining",
+          "Difficult to book"
+        ],
+        "budget_reality": "180-250 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Google Reviews, Le Fooding"
+      },
+      {
+        "name": "Sadot",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "Auteuil",
+        "lat": 48.853,
+        "lng": 2.268,
+        "cuisine": "French Contemporain",
+        "budget_tier": "euros euros euros",
+        "highlight": "Modern French with seasonal precision",
+        "why": "Intimate neighborhood gem with a young chef pushing classic French boundaries respectfully. Consistently praised for inventive plating and balanced flavors at reasonable prices.",
+        "cuisine_tags": [
+          "French",
+          "Contemporain",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "520 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative dishes with restraint",
+          "Excellent value for quality",
+          "Friendly and knowledgeable staff"
+        ],
+        "cons": [
+          "Small dining room gets crowded",
+          "Limited wine selection",
+          "Noise levels can be high"
+        ],
+        "budget_reality": "55-75 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Maison Caulier",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "Passy",
+        "lat": 48.8598,
+        "lng": 2.2889,
+        "cuisine": "Bistrot Francais",
+        "budget_tier": "euros euros",
+        "highlight": "Classic Parisian bistro with honest food",
+        "why": "Traditional bistro fare executed well with reliable comfort food and genuine atmosphere. A neighborhood favorite for decades with authentic charm and fair pricing.",
+        "cuisine_tags": [
+          "Bistrot",
+          "French",
+          "Classique"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "780 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.0",
+            "count": "620 avis"
+          }
+        ],
+        "pros": [
+          "Authentic bistro atmosphere",
+          "Reliable traditional dishes",
+          "Good wine by the glass"
+        ],
+        "cons": [
+          "Service can be slow on busy nights",
+          "Somewhat dated decor",
+          "Average plating presentation"
+        ],
+        "budget_reality": "28-40 euros par personne",
+        "day_note": "Ferme mardi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      },
+      {
+        "name": "Cafe de l'Homme",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "Trocadero",
+        "lat": 48.8614,
+        "lng": 2.2873,
+        "cuisine": "French Brasserie",
+        "budget_tier": "euros euros euros",
+        "highlight": "Brasserie with iconic Eiffel Tower views",
+        "why": "Upscale brasserie offering reliable French cuisine with one of the best terraces in Paris overlooking the Eiffel Tower. Perfect for special occasions and impressive dining.",
+        "cuisine_tags": [
+          "Brasserie",
+          "French",
+          "Views"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1200 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "3.9",
+            "count": "950 avis"
+          }
+        ],
+        "pros": [
+          "Spectacular terrace views of Eiffel Tower",
+          "Consistent quality in execution",
+          "Professional service team"
+        ],
+        "cons": [
+          "Prices inflated due to location",
+          "Crowded with tourists",
+          "Can feel impersonal"
+        ],
+        "budget_reality": "65-90 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Eater Paris"
+      },
+      {
+        "name": "Les Ombres",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "Quai Branly",
+        "lat": 48.8616,
+        "lng": 2.2971,
+        "cuisine": "French Contemporain",
+        "budget_tier": "euros euros euros",
+        "highlight": "Museum restaurant with Eiffel Tower views",
+        "why": "Sophisticated contemporary French dining in the Musee Quai Branly with stunning rooftop views. Excellent for lunch or dinner with quality cuisine above typical museum restaurant standards.",
+        "cuisine_tags": [
+          "French",
+          "Contemporain",
+          "Museum"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.2",
+            "count": "890 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.1",
+            "count": "710 avis"
+          }
+        ],
+        "pros": [
+          "Remarkable rooftop setting and views",
+          "Quality contemporary cooking",
+          "Reasonable for fine dining experience"
+        ],
+        "cons": [
+          "Can be touristy during peak hours",
+          "Service uneven",
+          "Wine markups substantial"
+        ],
+        "budget_reality": "58-80 euros par personne",
+        "day_note": "Ouvert selon les horaires du musee",
+        "terrace": true,
+        "walk_in": false,
+        "sources": "Google Reviews, TripAdvisor, Eater Paris"
+      },
+      {
+        "name": "Akramushi",
+        "arrondissement": "16ème",
+        "arr_num": "16",
+        "neighbourhood": "La Muette",
+        "lat": 48.8545,
+        "lng": 2.2756,
+        "cuisine": "Japanese Kaiseki",
+        "budget_tier": "euros euros euros",
+        "highlight": "Refined Japanese kaiseki and sashimi",
+        "why": "One of Paris best Japanese restaurants offering authentic kaiseki experience and pristine seafood. The omakase is meticulously prepared by experienced Japanese chefs with imported ingredients.",
+        "cuisine_tags": [
+          "Japanese",
+          "Kaiseki",
+          "Sashimi"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "420 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional freshness of fish",
+          "Knowledgeable and attentive service",
+          "Authentic Japanese atmosphere"
+        ],
+        "cons": [
+          "Expensive for all-omakase experience",
+          "Small seating capacity",
+          "Requires advance booking"
+        ],
+        "budget_reality": "75-120 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Omnivore, Google Reviews, Le Fooding"
+      }
+    ],
+    "17": [
+      {
+        "name": "Guy Savoy",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Batignolles",
+        "lat": 48.8801,
+        "lng": 2.3089,
+        "cuisine": "French Gastronomic",
+        "budget_tier": "€€€€",
+        "highlight": "Three Michelin stars, iconic artichoke soup",
+        "why": "Guy Savoy represents the pinnacle of French haute cuisine with impeccable technique and elegant presentations. His signature artichoke soup with black truffle remains one of Paris's most celebrated dishes.",
+        "cuisine_tags": [
+          "French",
+          "Gastronomic",
+          "Modern"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Michelin",
+            "score": "3 stars",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Flawless service and pacing",
+          "Innovative techniques with respect for tradition",
+          "Exceptional wine program and sommelier expertise"
+        ],
+        "cons": [
+          "Extremely expensive",
+          "Very difficult to book",
+          "Can feel overly formal for some"
+        ],
+        "budget_reality": "180-250 euros par personne with wine pairings",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Michelin Guide, Le Fooding, Google Reviews"
+      },
+      {
+        "name": "Le Relais de l'Entrecote",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Monceau",
+        "lat": 48.8819,
+        "lng": 2.303,
+        "cuisine": "French Bistro Steakhouse",
+        "budget_tier": "€€",
+        "highlight": "Legendary steak frites, no reservations policy",
+        "why": "This iconic Paris steakhouse serves exceptional quality beef with their famous compound butter sauce and crispy frites. The no-reservation policy creates an authentic, lively atmosphere that captures classic Parisian dining culture.",
+        "cuisine_tags": [
+          "Steak",
+          "Bistro",
+          "French"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "2400 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "1800 avis"
+          }
+        ],
+        "pros": [
+          "Outstanding value for quality meat",
+          "Vibrant, authentic Parisian atmosphere",
+          "Consistently excellent beef sourcing"
+        ],
+        "cons": [
+          "No reservations - long waits common",
+          "Can feel touristy during peak hours",
+          "Limited menu options"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Open daily, dinner only from 6:30 PM",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Septime la Grave",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Batignolles",
+        "lat": 48.8785,
+        "lng": 2.3145,
+        "cuisine": "Modern French",
+        "budget_tier": "€€€",
+        "highlight": "Refined small plates, seasonal ingredient-driven",
+        "why": "Sister restaurant to the celebrated Septime, this venue offers contemporary French cuisine with meticulous attention to ingredient quality and technical execution. The ever-changing seasonal menu reflects what is best at market.",
+        "cuisine_tags": [
+          "Modern French",
+          "Seasonal",
+          "Small Plates"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "950 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Creative seasonal dishes",
+          "Knowledgeable, passionate staff",
+          "Excellent wine selection by the glass"
+        ],
+        "cons": [
+          "Tight seating arrangement",
+          "Can be loud on busy nights",
+          "Premium pricing for portion sizes"
+        ],
+        "budget_reality": "65-85 euros par personne without wine",
+        "day_note": "Closed Monday and Tuesday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore Guide"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Monceau",
+        "lat": 48.8815,
+        "lng": 2.3065,
+        "cuisine": "French Bistro Casual",
+        "budget_tier": "€€",
+        "highlight": "Quality comfort food, casual elegant vibe",
+        "why": "The casual sibling of the acclaimed Frenchie, this spot delivers refined bistro cooking in a relaxed setting. It successfully balances serious culinary technique with approachable, craveable dishes.",
+        "cuisine_tags": [
+          "Bistro",
+          "French",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "1600 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": "900 avis"
+          }
+        ],
+        "pros": [
+          "Solid cooking at fair prices",
+          "Friendly, unpretentious service",
+          "Good wine list including natural options"
+        ],
+        "cons": [
+          "Can be noisy and crowded",
+          "Limited bar seating for drop-ins",
+          "Inconsistent reservations availability"
+        ],
+        "budget_reality": "40-55 euros par personne",
+        "day_note": "Lunch only Tuesday-Friday, dinner Wednesday-Saturday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Google Reviews, Reddit r/paris, Le Fooding"
+      },
+      {
+        "name": "Bistrot Paul Bert",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Batignolles-Monceau",
+        "lat": 48.8795,
+        "lng": 2.3108,
+        "cuisine": "Classic French Bistro",
+        "budget_tier": "€€",
+        "highlight": "Traditional recipes, reliable neighborhood spot",
+        "why": "A genuine neighborhood bistro with unpretentious cooking and honest French classics. The kitchen respects traditional preparations while maintaining consistent quality across their focused menu.",
+        "cuisine_tags": [
+          "Bistro",
+          "Traditional",
+          "French"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "1100 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.4",
+            "count": "650 avis"
+          }
+        ],
+        "pros": [
+          "Authentic neighborhood atmosphere",
+          "Solid traditional dishes",
+          "Fair pricing and good value"
+        ],
+        "cons": [
+          "Can be slow service during busy periods",
+          "Decor feels dated to some",
+          "Menu lacks adventure"
+        ],
+        "budget_reality": "38-50 euros par personne",
+        "day_note": "Closed Monday, open for lunch and dinner other days",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, TripAdvisor"
+      },
+      {
+        "name": "Mavie",
+        "arrondissement": "17ème",
+        "arr_num": "17",
+        "neighbourhood": "Courcelles",
+        "lat": 48.876,
+        "lng": 2.305,
+        "cuisine": "Italian Contemporary",
+        "budget_tier": "€€€",
+        "highlight": "Seasonal Italian, natural wines, neighborhood gem",
+        "why": "A sophisticated Italian restaurant that honors authentic techniques while embracing seasonal produce and natural wines. The intimate setting and focused menu showcase ingredients with restraint and intelligence.",
+        "cuisine_tags": [
+          "Italian",
+          "Contemporary",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "680 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent natural wine program",
+          "Authentic Italian cooking",
+          "Warm, knowledgeable service"
+        ],
+        "cons": [
+          "Small space, hard to get reservations",
+          "Limited menu means fewer choices",
+          "Can feel precious to some diners"
+        ],
+        "budget_reality": "55-75 euros par personne without wine",
+        "day_note": "Closed Monday and Sunday evening",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore Guide"
+      }
+    ],
+    "18": [
+      {
+        "name": "Le Miroir",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Montmartre",
+        "lat": 48.8873,
+        "lng": 2.3431,
+        "cuisine": "French Contemporary",
+        "budget_tier": "€€€",
+        "highlight": "Charming bistro with refined French cuisine",
+        "why": "Le Miroir combines classic French techniques with modern sensibility in an intimate setting on the slopes of Montmartre. The kitchen sources quality ingredients and the wine list reflects careful curation with affordable bottles.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "1200 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Knowledgeable sommelier staff",
+          "Excellent value for quality",
+          "Warm neighborhood atmosphere"
+        ],
+        "cons": [
+          "Small dining room gets crowded",
+          "Limited vegetarian options",
+          "Can be noisy during peak hours"
+        ],
+        "budget_reality": "50-70 euros par personne",
+        "day_note": "Ferme dimanche soir et lundi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Soul Kitchen",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Barbes-Rochechouart",
+        "lat": 48.8738,
+        "lng": 2.3445,
+        "cuisine": "Soul Food American",
+        "budget_tier": "€€",
+        "highlight": "Authentic American comfort food in Paris",
+        "why": "Soul Kitchen brings genuine Southern soul food and barbecue to Montmartre with pulled pork, brisket, and mac and cheese that satisfy cravings for authentic American fare. The casual vibe and reasonable prices make it a neighborhood favorite.",
+        "cuisine_tags": [
+          "American",
+          "Soul Food",
+          "Barbecue"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "950 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Generous portions",
+          "Friendly team",
+          "Good value for quality meat"
+        ],
+        "cons": [
+          "Can be slow service during rush",
+          "Limited seating",
+          "Smokiness lingers on clothes"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ouvert sept jours sur sept",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Omnivore, Eater Paris"
+      },
+      {
+        "name": "Maison Mere",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Pigalle",
+        "lat": 48.8806,
+        "lng": 2.3367,
+        "cuisine": "French Comfort Food",
+        "budget_tier": "€€",
+        "highlight": "Rustic French cooking with regional specialties",
+        "why": "Maison Mere celebrates French regional terroir with dishes like coq au vin, cassoulet, and duck confit prepared with traditional methods. The wine program focuses on natural and small-production labels that pair beautifully with the hearty cuisine.",
+        "cuisine_tags": [
+          "French",
+          "Regional",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "680 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent natural wine selection",
+          "Rustic authentic atmosphere",
+          "Fair prices for quality"
+        ],
+        "cons": [
+          "No reservations policy causes waits",
+          "Can be loud and crowded",
+          "Limited dessert options"
+        ],
+        "budget_reality": "35-55 euros par personne",
+        "day_note": "Ferme lundi et mardi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Chez Michou",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Montmartre",
+        "lat": 48.8863,
+        "lng": 2.3412,
+        "cuisine": "French Bistro Cabaret",
+        "budget_tier": "€€€€",
+        "highlight": "Historic cabaret dinner with classic menu",
+        "why": "Chez Michou offers an iconic Montmartre experience combining dinner with satirical cabaret performances and impersonations in an intimate basement theater space. The fixed menu focuses on traditional French bistro dishes executed reliably for the tourist and local crowd.",
+        "cuisine_tags": [
+          "French",
+          "Cabaret",
+          "Bistro"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "2100 avis"
+          },
+          {
+            "source": "Falstaff",
+            "score": "Solide",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Unique entertainment experience",
+          "Historic Montmartre location",
+          "Professional cabaret performers"
+        ],
+        "cons": [
+          "High price for mediocre food",
+          "Can feel touristy",
+          "Limited menu variety"
+        ],
+        "budget_reality": "80-120 euros par personne with show",
+        "day_note": "Ouvert tous les jours, spectacle chaque soir",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Google Reviews, Falstaff, TripAdvisor"
+      },
+      {
+        "name": "L'Arcane",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Montmartre",
+        "lat": 48.8875,
+        "lng": 2.3402,
+        "cuisine": "Modern French Gastronomie",
+        "budget_tier": "€€€€",
+        "highlight": "Refined contemporary French haute cuisine",
+        "why": "L'Arcane represents modern French gastronomic standards with precise technique, artistic plating, and innovative flavor combinations while respecting classical foundations. The tasting menu format showcases seasonal ingredients treated with meticulous care.",
+        "cuisine_tags": [
+          "French",
+          "Fine Dining",
+          "Contemporary"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.7",
+            "count": "420 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Impeccable execution and presentation",
+          "Attentive service without fussiness",
+          "Thoughtful wine pairings available"
+        ],
+        "cons": [
+          "High price point",
+          "Tasting menu only format",
+          "Can be pretentious atmosphere"
+        ],
+        "budget_reality": "85-120 euros par personne without wine",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      },
+      {
+        "name": "La Famille",
+        "arrondissement": "18ème",
+        "arr_num": "18",
+        "neighbourhood": "Montmartre",
+        "lat": 48.8868,
+        "lng": 2.3425,
+        "cuisine": "Mediterranean Italian",
+        "budget_tier": "€€",
+        "highlight": "Bright Italian cooking with seasonal focus",
+        "why": "La Famille brings unpretentious Mediterranean warmth to Montmartre with fresh pastas, wood-fired preparations, and Italian wines that encourage exploration over intimidation. The open kitchen and casual atmosphere reflect genuine hospitality rather than formality.",
+        "cuisine_tags": [
+          "Italian",
+          "Mediterranean",
+          "Wood-Fired"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "780 avis"
+          },
+          {
+            "source": "Omnivore",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Fresh house-made pasta",
+          "Welcoming and relaxed vibe",
+          "Good value for quality"
+        ],
+        "cons": [
+          "Small space creates waits",
+          "Service can be slow when busy",
+          "Limited parking nearby"
+        ],
+        "budget_reality": "30-50 euros par personne",
+        "day_note": "Ferme lundi",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Omnivore, Eater Paris"
+      }
+    ],
+    "19": [
+      {
+        "name": "Le Baratin",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Belleville",
+        "lat": 48.8722,
+        "lng": 2.3889,
+        "cuisine": "French Bistro",
+        "budget_tier": "EUR EUR EUR",
+        "highlight": "Classic bistro with neighborhood soul",
+        "why": "Cult favorite for traditional French cooking executed with precision and personality. Strong wine list and impeccable service despite casual atmosphere.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Wine-focused"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "650 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent wine selection at fair prices",
+          "Seasonal menu reflects market offerings",
+          "Authentic neighborhood vibe without pretension"
+        ],
+        "cons": [
+          "Can be noisy and crowded",
+          "Reservations essential weeks ahead",
+          "Limited vegetarian options"
+        ],
+        "budget_reality": "50-70 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Chez Prune",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Canal Saint-Martin",
+        "lat": 48.8732,
+        "lng": 2.3645,
+        "cuisine": "French Regional",
+        "budget_tier": "EUR EUR",
+        "highlight": "Canal-side dining with excellent value",
+        "why": "Perfect spot for lunch or casual dinner with a view of Canal Saint-Martin. Reliable French cooking at reasonable prices with a relaxed atmosphere.",
+        "cuisine_tags": [
+          "French",
+          "Regional",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "920 avis"
+          },
+          {
+            "source": "Eater Paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Beautiful terrace overlooking canal",
+          "Friendly and efficient service",
+          "Good value for location and quality"
+        ],
+        "cons": [
+          "Tourist-heavy especially weekends",
+          "Can be slow during peak hours",
+          "Menu is quite simple"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Eater Paris, TripAdvisor"
+      },
+      {
+        "name": "Gare au Gorille",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Belleville",
+        "lat": 48.8695,
+        "lng": 2.3867,
+        "cuisine": "Contemporary French",
+        "budget_tier": "EUR EUR EUR EUR",
+        "highlight": "Innovative cooking in intimate setting",
+        "why": "Modern French cuisine with creative technique and quality ingredients in a small, carefully curated dining room. Friendly chef-owner with strong neighborhood following.",
+        "cuisine_tags": [
+          "Contemporary",
+          "French",
+          "Creative"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "420 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Well-executed modern dishes",
+          "Attentive service from passionate staff",
+          "Good wine pairings available"
+        ],
+        "cons": [
+          "Small space books up quickly",
+          "Slightly pricey for portion sizes",
+          "Menu changes frequently"
+        ],
+        "budget_reality": "65-90 euros par personne",
+        "day_note": "Ferme dimanche et lundi",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Omnivore"
+      },
+      {
+        "name": "Le Verre Volant",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Belleville",
+        "lat": 48.871,
+        "lng": 2.3898,
+        "cuisine": "Natural Wine Bar",
+        "budget_tier": "EUR EUR",
+        "highlight": "Natural wines with simple honest food",
+        "why": "Leading natural wine destination in the 19ème with a carefully selected list and unpretentious Mediterranean-influenced small plates. Knowledgeable staff without snobbery.",
+        "cuisine_tags": [
+          "Natural Wine",
+          "Small Plates",
+          "Mediterranean"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "380 avis"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommande",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent curated natural wine selection",
+          "Affordable bottle prices",
+          "Warm and knowledgeable service"
+        ],
+        "cons": [
+          "Very small space, always packed",
+          "Some wines can be challenging",
+          "Limited food menu"
+        ],
+        "budget_reality": "30-50 euros par personne",
+        "day_note": "Ferme lundi",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Google Reviews, Reddit r/paris"
+      },
+      {
+        "name": "Frenchie To Go",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Canal Saint-Martin",
+        "lat": 48.8745,
+        "lng": 2.3658,
+        "cuisine": "Modern Bistro",
+        "budget_tier": "EUR EUR EUR",
+        "highlight": "Excellent value casual sibling of Frenchie",
+        "why": "More accessible version of the acclaimed Frenchie concept with quality ingredients and thoughtful preparation. Casual dining room but serious about flavors.",
+        "cuisine_tags": [
+          "Modern Bistro",
+          "French",
+          "Casual"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "780 avis"
+          },
+          {
+            "source": "Eater Paris",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Better value than main Frenchie",
+          "Consistent quality execution",
+          "Short wait times usually",
+          "Fun casual atmosphere"
+        ],
+        "cons": [
+          "Can feel rushed during service",
+          "Limited seating",
+          "Popular items run out quickly"
+        ],
+        "budget_reality": "35-50 euros par personne",
+        "day_note": "Ferme dimanche",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Eater Paris, Google Reviews, TripAdvisor"
+      },
+      {
+        "name": "L'Avant Comptoir",
+        "arrondissement": "19ème",
+        "arr_num": "19",
+        "neighbourhood": "Belleville",
+        "lat": 48.8705,
+        "lng": 2.3912,
+        "cuisine": "Spanish Tapas",
+        "budget_tier": "EUR EUR",
+        "highlight": "Standing room tapas bar with vibrant energy",
+        "why": "Excellent Spanish small plates and sherries in lively standing bar format. Perfect for groups and casual meals with authentic flavors and passionate service.",
+        "cuisine_tags": [
+          "Spanish",
+          "Tapas",
+          "Sherry"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "610 avis"
+          },
+          {
+            "source": "TripAdvisor",
+            "score": "4.5",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Great Spanish sherries and wines",
+          "Consistently good quality plates",
+          "Social and fun atmosphere",
+          "Good value"
+        ],
+        "cons": [
+          "Standing room only can be tiring",
+          "Very crowded nights",
+          "Limited seating comfort"
+        ],
+        "budget_reality": "25-40 euros par personne",
+        "day_note": "Ouvert tous les jours",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, TripAdvisor, Reddit r/paris"
+      }
+    ],
+    "20": [
+      {
+        "name": "Le Baratin",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Belleville",
+        "lat": 48.8721,
+        "lng": 2.3895,
+        "cuisine": "French Bistro",
+        "budget_tier": "EEE",
+        "highlight": "Michelin-starred neighborhood gem",
+        "why": "Le Baratin earned its Michelin star through consistent quality and creative bistro cooking in an unpretentious setting. Chef Raquel Rodriguez sources impeccably and changes menus seasonally with bold flavor combinations.",
+        "cuisine_tags": [
+          "French",
+          "Bistro",
+          "Modern"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.6",
+            "count": "650 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Excellent wine selection at fair prices",
+          "Warm casual atmosphere",
+          "Creative seasonal dishes",
+          "Attentive service"
+        ],
+        "cons": [
+          "Small dining room fills quickly",
+          "Limited vegetarian options",
+          "Noise levels can be high"
+        ],
+        "budget_reality": "50-75 euros per person without wine",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Google Reviews, Michelin Guide"
+      },
+      {
+        "name": "Septime la Grave",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Charonne",
+        "lat": 48.8586,
+        "lng": 2.3987,
+        "cuisine": "French Contemporary",
+        "budget_tier": "EEEE",
+        "highlight": "High-end sister bistro near Septime",
+        "why": "This is the more refined evening concept from the Septime team, focusing on impeccable ingredients and elegant plating. Reserved and sophisticated without being stuffy, it delivers excellent technical cooking.",
+        "cuisine_tags": [
+          "French",
+          "Contemporary",
+          "Seasonal"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "420 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Exceptional ingredient quality",
+          "Thoughtful wine pairings",
+          "Refined presentation",
+          "Knowledge sommelier team"
+        ],
+        "cons": [
+          "Expensive for neighborhood",
+          "Requires advance booking",
+          "Tasting menu only format",
+          "Less welcoming than Septime"
+        ],
+        "budget_reality": "80-110 euros per person without beverages",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Omnivore, Google Reviews"
+      },
+      {
+        "name": "Clamato",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Belleville",
+        "lat": 48.8703,
+        "lng": 2.3912,
+        "cuisine": "Seafood",
+        "budget_tier": "EEE",
+        "highlight": "Fish and oyster destination",
+        "why": "Clamato excels at simply prepared seafood with excellent daily selection of raw and cooked preparations. The casual counter seating and attentive team create an energetic and welcoming experience.",
+        "cuisine_tags": [
+          "Seafood",
+          "Oysters",
+          "French"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "520 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Ultra-fresh fish and oysters",
+          "Personable staff",
+          "Excellent value for quality",
+          "Casual vibe encourages sharing"
+        ],
+        "cons": [
+          "Very busy, often full",
+          "Limited seating at counter",
+          "Can be loud",
+          "Variable seafood availability"
+        ],
+        "budget_reality": "35-55 euros per person",
+        "day_note": "Closed Monday and Tuesday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Le Fooding, Reddit r/paris, Google Reviews"
+      },
+      {
+        "name": "Septime",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Charonne",
+        "lat": 48.8587,
+        "lng": 2.3976,
+        "cuisine": "French Modern",
+        "budget_tier": "EEE",
+        "highlight": "Beloved modern bistro institution",
+        "why": "Septime defined the modern Paris bistro movement with ingredient-focused cooking and natural wines in a relaxed setting. The lunch menu offers exceptional value compared to dinner.",
+        "cuisine_tags": [
+          "French",
+          "Modern",
+          "Natural Wine"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.5",
+            "count": "1200 reviews"
+          },
+          {
+            "source": "Le Fooding",
+            "score": "Recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Outstanding lunch value",
+          "Exceptional natural wine list",
+          "Casual welcoming atmosphere",
+          "Ingredient-driven cooking",
+          "Long-term consistency"
+        ],
+        "cons": [
+          "Very difficult dinner reservations",
+          "Smaller portions at high price",
+          "Can be touristy at dinner",
+          "Inconsistent execution some nights"
+        ],
+        "budget_reality": "28-35 euros lunch, 55-75 euros dinner",
+        "day_note": "Closed Sunday and Monday",
+        "terrace": false,
+        "walk_in": false,
+        "sources": "Le Fooding, Omnivore, Eater Paris, Google Reviews"
+      },
+      {
+        "name": "Le Merci",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Pere Lachaise",
+        "lat": 48.8618,
+        "lng": 2.3856,
+        "cuisine": "French Casual",
+        "budget_tier": "EE",
+        "highlight": "Relaxed neighborhood family bistro",
+        "why": "Le Merci serves honest French bistro food in a genuine neighborhood setting without pretension or high prices. The rotating daily specials represent solid value and the terrace is perfect for warm weather.",
+        "cuisine_tags": [
+          "French",
+          "Casual",
+          "Bistro"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.3",
+            "count": "340 reviews"
+          },
+          {
+            "source": "Reddit r/paris",
+            "score": "Frequently mentioned positive",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "Very reasonable prices",
+          "Genuine neighborhood crowd",
+          "Good daily specials",
+          "Pleasant terrace in summer",
+          "Accommodating service"
+        ],
+        "cons": [
+          "Variable kitchen consistency",
+          "Can be noisy",
+          "Simple presentations",
+          "Limited wine selection"
+        ],
+        "budget_reality": "20-32 euros per person",
+        "day_note": "Closed late August",
+        "terrace": true,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, TripAdvisor"
+      },
+      {
+        "name": "Tessoku Ramen",
+        "arrondissement": "20ème",
+        "arr_num": "20",
+        "neighbourhood": "Belleville",
+        "lat": 48.8698,
+        "lng": 2.3878,
+        "cuisine": "Japanese Ramen",
+        "budget_tier": "E",
+        "highlight": "Authentic ramen in casual setting",
+        "why": "Tessoku brings serious Tokyo ramen technique to Belleville with house-made noodles and carefully crafted broths. The counter service is fast and the prices remain reasonable for the quality.",
+        "cuisine_tags": [
+          "Japanese",
+          "Ramen",
+          "Noodles"
+        ],
+        "scores": [
+          {
+            "source": "Google",
+            "score": "4.4",
+            "count": "280 reviews"
+          },
+          {
+            "source": "Reddit r/paris",
+            "score": "Frequently recommended",
+            "count": ""
+          }
+        ],
+        "pros": [
+          "House-made quality noodles",
+          "Rich flavorful broths",
+          "Reasonable prices",
+          "Quick service",
+          "Authentic Tokyo style"
+        ],
+        "cons": [
+          "Very limited seating",
+          "Counter only format",
+          "No reservations accepted",
+          "Can have long waits",
+          "Minimal space"
+        ],
+        "budget_reality": "12-16 euros per person",
+        "day_note": "Closed Tuesday",
+        "terrace": false,
+        "walk_in": true,
+        "sources": "Google Reviews, Reddit r/paris, Eater Paris"
+      }
+    ]
+  }
+}
