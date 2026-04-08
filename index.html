@@ -418,6 +418,104 @@ let pLat=48.8282, pLng=2.3264, pName='Alésia — 14ème';
 let tmpLat=48.8282, tmpLng=2.3264, tmpName='Alésia — 14ème';
 let locMap=null, locMarker=null;
 let bMap=null, bMarkers=[];
+let CACHE = null; // loaded from restaurants.json
+
+// ── LOAD CACHE ────────────────────────────────────────────
+let cacheReady = false;
+
+async function loadCache() {
+  try {
+    const res = await fetch('./restaurants.json?v=' + Date.now());
+    if (res.ok) {
+      CACHE = await res.json();
+      cacheReady = true;
+      console.log('Cache loaded:', Object.keys(CACHE.arrondissements||{}).length, 'arrondissements,', getCachedRestaurants().length, 'total restaurants');
+      // If browse map already initialised, refresh it now
+      if (bMap) refreshBrowseFromCache();
+    }
+  } catch(e) {
+    console.log('No cache file found, using built-in seed data');
+    cacheReady = true;
+  }
+}
+loadCache();
+
+// Build flat list of all cached restaurants for browse + search
+function getCachedRestaurants() {
+  if (!CACHE || !CACHE.arrondissements) return [];
+  return Object.values(CACHE.arrondissements).flat();
+}
+
+// Try to find matching restaurants from cache based on questionnaire inputs
+function searchCache(cuisine, niveau, budget, atmo, extras) {
+  const all = getCachedRestaurants();
+  if (!all.length) return null;
+
+  const budgetNum = parseInt(budget);
+
+  // Score each restaurant against criteria
+  const scored = all.map(r => {
+    let score = 0;
+
+    // Budget match - parse budget_reality string
+    const budgetStr = (r.budget_reality || '').replace(/[^0-9-]/g, '');
+    const budgetParts = budgetStr.split('-').map(Number).filter(Boolean);
+    if (budgetParts.length) {
+      const avg = budgetParts.reduce((a,b)=>a+b,0) / budgetParts.length;
+      if (avg <= budgetNum) score += 3;
+      else if (avg <= budgetNum * 1.2) score += 1;
+      else score -= 2;
+    }
+
+    // Cuisine match
+    if (cuisine.length) {
+      const rCuisine = (r.cuisine + ' ' + (r.cuisine_tags||[]).join(' ')).toLowerCase();
+      cuisine.forEach(c => {
+        const cLower = c.toLowerCase().replace(/[🥖🥩🐟🍣🌿🍝🌏🥘✨]/g,'').trim();
+        if (rCuisine.includes(cLower)) score += 4;
+      });
+    } else {
+      score += 2; // neutral if no cuisine filter
+    }
+
+    // Terrace
+    if (extras.some(e => e.includes('Terrasse')) && r.terrace) score += 2;
+
+    // Walk-in
+    if (extras.some(e => e.includes('Sans')) && r.walk_in) score += 2;
+
+    return { r, score };
+  });
+
+  // Sort by score descending, take top 4
+  const top = scored.sort((a,b) => b.score - a.score).slice(0, 4).map(s => s.r);
+  if (top.length < 2) return null; // not enough matches
+
+  // Convert cache format to result card format
+  return {
+    intro: "Selections from our curated Paris restaurant database.",
+    restaurants: top.map((r, i) => ({
+      name: r.name,
+      arrondissement: r.arrondissement || r.arr_num + 'eme',
+      neighbourhood: r.neighbourhood || '',
+      match: ['97%','94%','91%','88%'][i] || '88%',
+      why: r.why || '',
+      cuisine_tags: r.cuisine_tags || [r.cuisine],
+      highlight_tag: r.highlight || '',
+      scores: r.scores || [],
+      pros: r.pros || [],
+      cons: r.cons || [],
+      budget_reality: r.budget_reality || '',
+      metro_route: 'Voir Google Maps pour itineraire depuis ' + pName,
+      day_note: r.day_note || '',
+      group_note: '',
+      terrace: r.terrace || false,
+      walk_in: r.walk_in || false,
+      best_for: r.highlight || '',
+      sources_searched: r.sources || 'Base de donnees curee'
+    }))
+  };
+}
 
 // ── UTILS ─────────────────────────────────────────────────
 function sv(sid,vid,fmt) { document.getElementById(vid).innerHTML = fmt(document.getElementById(sid).value); }
@@ -505,6 +603,18 @@ async function findRestaurants() {
   document.getElementById('form-view').style.display='none';
   document.getElementById('results-view').style.display='block';
   document.getElementById('r-summary').textContent=`${pName} - ${budget} euros/pers - ${travel} min max`;
+  // ── Try cache first ──────────────────────────────────────
+  const cachedResult = searchCache(cuisine, niveau, budget, atmo, extras);
+  if (cachedResult) {
+    setLoading('Chargement depuis la base de donnees...', '');
+    await new Promise(r => setTimeout(r, 400)); // brief flash so user sees it loaded
+    renderResults(cachedResult);
+    document.getElementById('cta').disabled=false;
+    document.getElementById('cta').textContent='Trouver mes restaurants ->';
+    return;
+  }
+
+  // ── No cache match — fall back to live API ───────────────
   setLoading('Recherche des meilleures tables...', 'Consultation de nos sources parisiennes...');
 
   const today = new Date().toLocaleDateString('fr-FR', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
@@ -654,6 +764,39 @@ const SEED=[
 function initBrowseMap() {
   bMap = L.map('browse-map',{zoomControl:true,attributionControl:false}).setView([48.8566,2.3522],13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(bMap);
+  // Wait for cache if still loading, then render
+  if (cacheReady) {
+    refreshBrowseFromCache();
+  } else {
+    // Poll until cache is ready (max 5 seconds)
+    let attempts = 0;
+    const poll = setInterval(() => {
+      attempts++;
+      if (cacheReady || attempts > 25) {
+        clearInterval(poll);
+        refreshBrowseFromCache();
+      }
+    }, 200);
+  }
+}
+
+function refreshBrowseFromCache() {
+  const cached = getCachedRestaurants();
+  if (cached.length) {
+    // Convert cache format to SEED format for map display
+    const mapped = cached.map(r => ({
+      name: r.name,
+      arr: String(r.arr_num !== undefined ? r.arr_num : (r.arrondissement||'')).replace(/[^0-9]/g,''),
+      nbh: r.neighbourhood || '',
+      lat: r.lat || 48.8566,
+      lng: r.lng || 2.3522,
+      c: r.cuisine || '',
+      b: r.budget_tier || '',
+      h: r.highlight || ''
+    })).filter(r => r.lat && r.lng && r.lat !== 48.8566);
+    if (mapped.length) { renderBMarkers(mapped); return; }
+  }
+  // Fall back to hardcoded seed
   renderBMarkers(SEED);
 }
 
@@ -673,8 +816,20 @@ function renderBMarkers(list) {
 function filterArr(el,arr) {
   document.querySelectorAll('.ac').forEach(c=>c.classList.remove('on'));
   el.classList.add('on');
-  const filtered=arr==='all'?SEED:SEED.filter(r=>r.arr===arr);
-  renderBMarkers(filtered);
+  // Use cache if available, otherwise fall back to SEED
+  const cached = getCachedRestaurants();
+  const source = cached.length ? cached.map(r => ({
+    name: r.name,
+    arr: String(r.arr_num || r.arrondissement||'').replace(/[^0-9]/g,''),
+    nbh: r.neighbourhood || '',
+    lat: r.lat || 48.8566,
+    lng: r.lng || 2.3522,
+    c: r.cuisine || '',
+    b: r.budget_tier || '',
+    h: r.highlight || ''
+  })).filter(r => r.lat && r.lng && r.lat !== 48.8566) : SEED;
+  const filtered = arr==='all' ? source : source.filter(r=>r.arr===arr);
+  renderBMarkers(filtered.length ? filtered : SEED.filter(r=>arr==='all'||r.arr===arr));
   if(arr!=='all' && filtered.length && bMap) bMap.flyTo([filtered[0].lat,filtered[0].lng],14,{duration:0.6});
 }
 
