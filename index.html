@@ -425,7 +425,7 @@ let cacheReady = false;
 
 async function loadCache() {
   try {
-    const res = await fetch('./restaurants.json?v=' + Date.now());
+    const res = await fetch('/paris-dining/restaurants.json?v=' + Date.now());
     if (res.ok) {
       CACHE = await res.json();
       cacheReady = true;
@@ -772,7 +772,7 @@ function initBrowseMap() {
     let attempts = 0;
     const poll = setInterval(() => {
       attempts++;
-      if (cacheReady || attempts > 25) {
+      if (cacheReady || attempts > 50) {
         clearInterval(poll);
         refreshBrowseFromCache();
       }
