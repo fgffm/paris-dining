@@ -424,19 +424,30 @@ let CACHE = null; // loaded from restaurants.json
 let cacheReady = false;
 
 async function loadCache() {
-  try {
-    const res = await fetch('/paris-dining/restaurants.json?v=' + Date.now());
-    if (res.ok) {
-      CACHE = await res.json();
-      cacheReady = true;
-      console.log('Cache loaded:', Object.keys(CACHE.arrondissements||{}).length, 'arrondissements,', getCachedRestaurants().length, 'total restaurants');
-      // If browse map already initialised, refresh it now
-      if (bMap) refreshBrowseFromCache();
+  // Try multiple paths to find restaurants.json
+  const paths = [
+    './restaurants.json',
+    '/paris-dining/restaurants.json',
+    'restaurants.json'
+  ];
+  for (const path of paths) {
+    try {
+      const res = await fetch(path + '?v=' + Date.now());
+      if (res.ok) {
+        const text = await res.text();
+        CACHE = JSON.parse(text);
+        cacheReady = true;
+        const total = getCachedRestaurants().length;
+        console.log('Cache loaded from', path, ':', Object.keys(CACHE.arrondissements||{}).length, 'arrondissements,', total, 'restaurants');
+        if (bMap) refreshBrowseFromCache();
+        return;
+      }
+    } catch(e) {
+      console.log('Failed path:', path, e.message);
     }
-  } catch(e) {
-    console.log('No cache file found, using built-in seed data');
-    cacheReady = true;
   }
+  console.log('No cache found, using seed data');
+  cacheReady = true;
 }
 loadCache();
 
